@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 400;
+  font-style: normal;
+  src: local('CircularStd'), url('CircularStd-Book.otf') format('opentype');
+}
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 500;
+  font-style: normal;
+  src: local('CircularStd'), url('CircularStd-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 700;
+  font-style: normal;
+  src: local('CircularStd'), url('CircularStd-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  font-weight: 400;
+  font-style: normal;
+  src: local('IRANYekan'), url('IRANYekanRegularFaNum.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'IRANYekan';
+  font-weight: 500;
+  font-style: normal;
+  src: local('IRANYekan'), url('IRANYekanMediumFaNum.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'IRANYekan';
+  font-weight: 700;
+  font-style: normal;
+  src: local('IRANYekan'), url('IRANYekanBoldFaNum.ttf') format('truetype');
+}
+
