@@ -1,11 +1,11 @@
 module.exports = {
-  content: ["./*.html"], // Ensure Tailwind scans your HTML files
+  content: ["./*.html", "./**/*.html"], 
   theme: {
     extend: {
       colors: {
         base: '#000107',
         primary: '#64A0FF',
-        "blue-100": "#050A24",
+        "blue-800": "#050A24",
         "blue-100": "#326CED",
         white: '#FFFFFF',
         gray: '#9D9D9D',
