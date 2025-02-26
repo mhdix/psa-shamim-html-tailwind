@@ -16,7 +16,8 @@ module.exports = {
       fontFamily: {
         IRANYekan: ["IRANYekan"],
       },
+
     },
   },
-  plugins: [],
+  plugins: [],  
 };
