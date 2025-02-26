@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./landingCss.css" />
     <link rel="stylesheet" href="/public/fonts/index.css" />
+    <link rel="stylesheet" href="/src/output.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -14,7 +15,10 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com/"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -22,39 +26,37 @@
     />
     <title>Document</title>
   </head>
-  <body class="bg-black xl:max-w-screen-2xl w-full mx-auto font-IRANYekan">
-    <header class="bg-black">
-      <div class="flex justify-around">
+  <body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
+    <header class="bg-black w-full top-0">
+      <div class="flex items-center justify-around py-4 border-gray">
         <div class="flex">
           <img
             src="/public/images/Lotouslogo.png"
             alt="Lotous Logo"
-            class="w-[115px] mt-10"
+            class="w-[115px]"
           />
           <div
-            class="relative w-[450px] h-[50px] bg-white rounded-lg mt-13 mr-5 pr-[14px] hidden lg:block"
+            class="relative w-[450px] h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block"
           >
             <input
               type="text"
-              class="pl-10 pr-4 rounded-lg focus:outline-none placeholder-gray-300 mr-3 mt-30 hidden lg:block "
-              placeholder="جست و جو..."
+              class="pl-10 pr-4 rounded-lg focus:outline-none placeholder-gray-300 mr-3 mt-30 hidden lg:block"
+              placeholder="جست و جو"
             />
             <div class="absolute inset-y-0 pl-3 flex items-center">
               <i class="fas fa-search text-gray-400 mt-[5px]"></i>
             </div>
           </div>
         </div>
-        <div class="flex mt-13">
+        <div class="flex">
           <div
-            class="w-[180px] h-[50px] border rounded-3xl text-white-800 flex"
+            class="w-[180px] h-[50px] border rounded-3xl text-white-800 flex items-center justify-center px-4 gap-4"
           >
             <i
-              class="fa fa-sign-in text-xl text-white mt-3.5 mr-4"
+              class="fa fa-sign-in text-xl text-white flex items-center"
               aria-hidden="true"
             ></i>
-            <p
-              class="text-white mt-2 mr-4 text-sm md:text-red-300 lg:text-blue-400 xl:text-gray-50"
-            >
+            <p class="text-white text-sm lg:text-blue-400 xl:text-gray-50">
               ورود / ثبت نام
             </p>
           </div>
@@ -75,15 +77,15 @@
         </ul>
       </div>
     </header>
-    <!-- <div class="swiper mySwiper">
+    <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide max-w-[400px]">
+        <div class="swiper-slide relative">
           <h1>سامانه مدیریت نقدینگی</h1>
           <p>
             خرید و فروش دارایی های توکنیزه شده را در محیطی امن و حرفه ای تجربه
             کنید
           </p>
-          <button class="relative top-[50%] right-[80%] z-120">
+          <button class="absolute top-[50%] right-[80%] z-120">
             <span class="flex justify-center px-4 py-2 rounded-3xl"
               >همین حالا ثبت نام کنید</span
             >
@@ -96,7 +98,9 @@
             سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
             توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند.
           </p>
-          <img src="/public/images/slieder2.jpg" alt="" />
+          <div class="relative border w-full">
+            <img src="/public/images/slieder2.jpg" alt="" />
+          </div>
         </div>
         <div class="swiper-slide">
           <h1>حفظ امنیت و شفافیت</h1>
@@ -116,7 +120,7 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
-    </div> -->
+    </div>
 
     <div class="w-full py-5 text-[#64A0FF] text-center text-[20px] relative">
       <div class="w-[20%] h-[3px] bg-white mt-3.5 absolute"></div>
@@ -128,78 +132,246 @@
       <div class="w-[20%] h-[3px] bg-white top-8.5 absolute left-0"></div>
     </div>
 
-    <div class="cardSwiper myCardSwiper relative">
+    <div class="cardSwiper myCardSwiper relative overflow-hidden">
       <div class="swiper-wrapper">
-        <div class="swiper-slide card">
+        <div
+          class="w-fit swiper-slide border border-primary relative h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
+        >
           <img
-            class="w-[420px] rounded-t-[7px] absolute"
+            class="rounded-t-[7px] w-full"
             src="/public/images/Products/house1.png"
             alt=""
           />
-          <div class="absolute flex justify-between w-full z-0">
+          <div class="flex absolute top-4 justify-between w-full text-primary">
             <div class="">
-              <p
-                class="text-[.9rem] text-[#326CED] py-2 px-4 mr-3 mt-4 bg-white rounded-[32px]"
-              >
+              <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm">
                 عرضه اولیه
               </p>
             </div>
             <div
-              class="ml-3 mt-4 py-2 px-4 bg-[#20202029] z-10 rounded-[32px] prog"
+              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
             >
-              <p class="text-[.9rem] z-20 text-white">20% پیشرفت</p>
+              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
             </div>
           </div>
-          <div class="text-white z-100 relative mt-60 text-[20px] mr-5">
-            <h2>مجتمع مسکونی پرنیا</h2>
+          <div class="text-white mt-2 mr-5 text-xl relative">
+            <h2 class="">مجتمع مسکونی پرنیا</h2>
+            <div class="opacity-30 text-white text-sm mt-4">
+              <span class="pl-12">PRNI</span>
+              <span>تهران _ منطقه1_ مسکونی</span>
+            </div>
+            <div class="mt-5">
+              <span class="opacity-50 text-xs"
+                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+                انتشار: 1403/12/12</span
+              >
+              <span class="opacity-50 text-xs mr-3">
+                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+                مدت اعتبار: 36 ماه
+              </span>
+              <div class="mt-6 lg:mt-4">
+                <span class="opacity-50 text-sm"
+                  >شروع سرمایه گذاری : 100,000 تومان</span
+                >
+              </div>
+              <div class="mt-5 text-lg lg:mt-3">
+                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+              </div>
+              <div
+                class="text-xs text-left ml-2 mt-[80px] w-full flex md:mt-6 md:mr-[100px] lg:mt-6 lg:mr-[60px] lg:text-sm"
+              >
+                <button
+                  class="px-6 py-2 boreder bg-blue-500 rounded-lg text-white ml-1"
+                >
+                  شروع سرمایه گذاری
+                </button>
+                <button
+                  class="px-[25px] py-2 border border-primary text-primary rounded-lg"
+                >
+                  مشاهده جزئیات
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide card">
+        <div
+          class="w-fit swiper-slide border border-primary relative h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
+        >
           <img
-            class="w-[420px] rounded-t-[7px] absolute"
+            class="rounded-t-[7px] w-full"
             src="/public/images/Products/house1.png"
             alt=""
           />
-          <div class="absolute flex justify-between w-full z-0">
+          <div class="flex absolute top-4 justify-between w-full text-primary">
             <div class="">
-              <p
-                class="text-[.9rem] text-[#326CED] py-2 px-4 mr-3 mt-4 bg-white rounded-[32px]"
-              >
+              <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm">
                 عرضه اولیه
               </p>
             </div>
             <div
-              class="ml-3 mt-4 py-2 px-4 bg-[#20202029] z-10 rounded-[32px]"
+              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
             >
-              <p class="text-[.9rem] z-20 text-white">20% پیشرفت</p>
+              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
             </div>
           </div>
-          <div class="text-white z-100 relative mt-60 text-[20px] mr-5">
-            <h2>مجتمع مسکونی پرنیا</h2>
+          <div class="text-white mt-2 mr-5 text-xl relative">
+            <h2 class="">مجتمع مسکونی پرنیا</h2>
+            <div class="opacity-30 text-white text-sm mt-4">
+              <span class="pl-12">PRNI</span>
+              <span>تهران _ منطقه1_ مسکونی</span>
+            </div>
+            <div class="mt-5">
+              <span class="opacity-50 text-xs"
+                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+                انتشار: 1403/12/12</span
+              >
+              <span class="opacity-50 text-xs mr-3">
+                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+                مدت اعتبار: 36 ماه
+              </span>
+              <div class="mt-6 lg:mt-4">
+                <span class="opacity-50 text-sm"
+                  >شروع سرمایه گذاری : 100,000 تومان</span
+                >
+              </div>
+              <div class="mt-5 text-lg lg:mt-3">
+                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+              </div>
+              <div
+                class="text-xs text-left ml-2 mt-[80px] w-full flex md:mt-6 md:mr-[100px] lg:mt-6 lg:mr-[60px] lg:text-sm"
+              >
+                <button
+                  class="px-6 py-2 boreder bg-blue-500 rounded-lg text-white ml-1"
+                >
+                  شروع سرمایه گذاری
+                </button>
+                <button
+                  class="px-[25px] py-2 border border-primary text-primary rounded-lg"
+                >
+                  مشاهده جزئیات
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide card">
+        <div
+          class="w-fit swiper-slide border border-primary relative h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
+        >
           <img
-            class="w-[420px] rounded-t-[7px] absolute"
+            class="rounded-t-[7px] w-full"
             src="/public/images/Products/house1.png"
             alt=""
           />
-          <div class="absolute flex justify-between w-full z-0">
+          <div class="flex absolute top-4 justify-between w-full text-primary">
             <div class="">
-              <p
-                class="text-[.9rem] text-[#326CED] py-2 px-4 mr-3 mt-4 bg-white rounded-[32px]"
-              >
+              <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm">
                 عرضه اولیه
               </p>
             </div>
             <div
-              class="ml-3 mt-4 py-2 px-4 bg-[#20202029] z-10 rounded-[32px] prog"
+              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
             >
-              <p class="text-[.9rem] z-20 text-white">20% پیشرفت</p>
+              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
             </div>
           </div>
-          <div class="text-white z-100 relative mt-60 text-[20px] mr-5">
-            <h2>مجتمع مسکونی پرنیا</h2>
+          <div class="text-white mt-2 mr-5 text-xl relative">
+            <h2 class="">مجتمع مسکونی پرنیا</h2>
+            <div class="opacity-30 text-white text-sm mt-4">
+              <span class="pl-12">PRNI</span>
+              <span>تهران _ منطقه1_ مسکونی</span>
+            </div>
+            <div class="mt-5">
+              <span class="opacity-50 text-xs"
+                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+                انتشار: 1403/12/12</span
+              >
+              <span class="opacity-50 text-xs mr-3">
+                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+                مدت اعتبار: 36 ماه
+              </span>
+              <div class="mt-6 lg:mt-4">
+                <span class="opacity-50 text-sm"
+                  >شروع سرمایه گذاری : 100,000 تومان</span
+                >
+              </div>
+              <div class="mt-5 text-lg lg:mt-3">
+                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+              </div>
+              <div
+                class="text-xs text-left ml-2 mt-[80px] w-full flex md:mt-6 md:mr-[100px] lg:mt-6 lg:mr-[60px] lg:text-sm"
+              >
+                <button
+                  class="px-6 py-2 boreder bg-blue-500 rounded-lg text-white ml-1"
+                >
+                  شروع سرمایه گذاری
+                </button>
+                <button
+                  class="px-[25px] py-2 border border-primary text-primary rounded-lg"
+                >
+                  مشاهده جزئیات
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-fit swiper-slide border border-primary relative h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
+        >
+          <img
+            class="rounded-t-[7px] w-full"
+            src="/public/images/Products/house1.png"
+            alt=""
+          />
+          <div class="flex absolute top-4 justify-between w-full text-primary">
+            <div class="">
+              <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm">
+                عرضه اولیه
+              </p>
+            </div>
+            <div
+              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
+            >
+              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+            </div>
+          </div>
+          <div class="text-white mt-2 mr-5 text-xl relative">
+            <h2 class="">مجتمع مسکونی پرنیا</h2>
+            <div class="opacity-30 text-white text-sm mt-4">
+              <span class="pl-12">PRNI</span>
+              <span>تهران _ منطقه1_ مسکونی</span>
+            </div>
+            <div class="mt-5">
+              <span class="opacity-50 text-xs"
+                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+                انتشار: 1403/12/12</span
+              >
+              <span class="opacity-50 text-xs mr-3">
+                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+                مدت اعتبار: 36 ماه
+              </span>
+              <div class="mt-6 lg:mt-4">
+                <span class="opacity-50 text-sm"
+                  >شروع سرمایه گذاری : 100,000 تومان</span
+                >
+              </div>
+              <div class="mt-5 text-lg lg:mt-3">
+                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+              </div>
+              <div
+                class="text-xs text-left ml-2 mt-[80px] w-full flex md:mt-6 md:mr-[100px] lg:mt-6 lg:mr-[60px] lg:text-sm"
+              >
+                <button
+                  class="px-6 py-2 boreder bg-blue-500 rounded-lg text-white ml-1"
+                >
+                  شروع سرمایه گذاری
+                </button>
+                <button
+                  class="px-[25px] py-2 border border-primary text-primary rounded-lg"
+                >
+                  مشاهده جزئیات
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -208,6 +380,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/"></script>
+
     <script>
       var swiper = new Swiper(".mySwiper", {
         pagination: {
@@ -221,10 +395,10 @@
 
     <script>
       var swiper = new Swiper(".myCardSwiper", {
-        slidesPerView: 4,
-        centeredSlides: false,
+        slidesPerView: 1,
+        centeredSlides: true,
         spaceBetween: 30,
-        grabCursor: true,
+        grabCursor: false,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
