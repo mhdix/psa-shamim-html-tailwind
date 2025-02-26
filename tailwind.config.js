@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./*.html", "./**/*.html"], 
+  content: ["./*.html", "./**/*.html"],
   theme: {
     extend: {
       colors: {
@@ -8,6 +8,7 @@ module.exports = {
         "blue-800": "#050A24",
         "blue-100": "#326CED",
         white: "#FFFFFF",
+        "white-200": '#ECE6F0',
         gray: "#9D9D9D",
         "gray-200": "#606060",
         "gray-600": "#434343",
@@ -19,5 +20,5 @@ module.exports = {
 
     },
   },
-  plugins: [],  
+  plugins: [],
 };
