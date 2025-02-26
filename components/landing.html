@@ -1,11 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./landingCss.css" />
+    <link rel="stylesheet" href="/public/fonts/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="bg-black xl:max-w-screen-2xl w-full mx-auto font-IRANYekan">
+    <header class="bg-black">
+      <div class="flex justify-around">
+        <div class="flex">
+          <img
+            src="/public/images/Lotouslogo.png"
+            alt="Lotous Logo"
+            class="w-[115px] mt-10"
+          />
+          <div
+            class="relative w-[450px] h-[50px] bg-white rounded-lg mt-13 mr-5 pr-[14px] hidden lg:block"
+          >
+            <input
+              type="text"
+              class="pl-10 pr-4 rounded-lg focus:outline-none placeholder-gray-300 mr-3 mt-30 hidden lg:block "
+              placeholder="جست و جو..."
+            />
+            <div class="absolute inset-y-0 pl-3 flex items-center">
+              <i class="fas fa-search text-gray-400 mt-[5px]"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex mt-13">
+          <div
+            class="w-[180px] h-[50px] border rounded-3xl text-white-800 flex"
+          >
+            <i
+              class="fa fa-sign-in text-xl text-white mt-3.5 mr-4"
+              aria-hidden="true"
+            ></i>
+            <p
+              class="text-white mt-2 mr-4 text-sm md:text-red-300 lg:text-blue-400 xl:text-gray-50"
+            >
+              ورود / ثبت نام
+            </p>
+          </div>
+          <div class="w-[64px] h-[50px] border rounded-3xl mr-[20px] hidden">
+            <img src="/public/images/sun.svg" alt="" class="m-auto mt-2" />
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 hidden">
+        <ul class="flex text-white font-iranyekan">
+          <li class="pr-4 text-xl">معاملات</li>
+          <li class="pr-4 text-xl">آموزش</li>
+          <li class="pr-4 text-xl">فرصت های سرمایه گذاری</li>
+          <li class="pr-4 text-xl">قوانین</li>
+          <li class="pr-4 text-xl">اخبار</li>
+          <li class="pr-4 text-xl">تماس با ما</li>
+          <li class="pr-4 text-xl">درباره ما</li>
+        </ul>
+      </div>
+    </header>
+    <!-- <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide max-w-[400px]">
+          <h1>سامانه مدیریت نقدینگی</h1>
+          <p>
+            خرید و فروش دارایی های توکنیزه شده را در محیطی امن و حرفه ای تجربه
+            کنید
+          </p>
+          <button class="relative top-[50%] right-[80%] z-120">
+            <span class="flex justify-center px-4 py-2 rounded-3xl"
+              >همین حالا ثبت نام کنید</span
+            >
+          </button>
+          <img src="/public/images/slieder1.jfif" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <h1>مدیریت و ردیابی معاملات</h1>
+          <p>
+            سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
+            توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند.
+          </p>
+          <img src="/public/images/slieder2.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <h1>حفظ امنیت و شفافیت</h1>
+          <p>
+            با استفاده از فناوری‌های رمزنگاری و بلاک‌چین، این سامانه از امنیت
+            بالایی برخوردار است.
+          </p>
+          <img src="/public/images/slider3.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <h1>پشتیبانی از توکن‌سازی دارایی‌ها</h1>
+          <p>
+            این سامانه قابلیت تبدیل دارایی‌های فیزیکی یا دیجیتال به توکن‌های
+            مبتنی بر بلاک‌چین را دارد.
+          </p>
+          <img src="/public/images/slider4.jpg" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div> -->
+
+    <div class="w-full py-5 text-[#64A0FF] text-center text-[20px] relative">
+      <div class="w-[20%] h-[3px] bg-white mt-3.5 absolute"></div>
+      <div class="flex justify-between w-[60%] m-auto">
+        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+        <h2>فرصت های سرمایه گذاری</h2>
+        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+      </div>
+      <div class="w-[20%] h-[3px] bg-white top-8.5 absolute left-0"></div>
+    </div>
+
+    <div class="cardSwiper myCardSwiper relative">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <img
+            class="w-[420px] rounded-t-[7px] absolute"
+            src="/public/images/Products/house1.png"
+            alt=""
+          />
+          <div class="absolute flex justify-between w-full z-0">
+            <div class="">
+              <p
+                class="text-[.9rem] text-[#326CED] py-2 px-4 mr-3 mt-4 bg-white rounded-[32px]"
+              >
+                عرضه اولیه
+              </p>
+            </div>
+            <div
+              class="ml-3 mt-4 py-2 px-4 bg-[#20202029] z-10 rounded-[32px] prog"
+            >
+              <p class="text-[.9rem] z-20 text-white">20% پیشرفت</p>
+            </div>
+          </div>
+          <div class="text-white z-100 relative mt-60 text-[20px] mr-5">
+            <h2>مجتمع مسکونی پرنیا</h2>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img
+            class="w-[420px] rounded-t-[7px] absolute"
+            src="/public/images/Products/house1.png"
+            alt=""
+          />
+          <div class="absolute flex justify-between w-full z-0">
+            <div class="">
+              <p
+                class="text-[.9rem] text-[#326CED] py-2 px-4 mr-3 mt-4 bg-white rounded-[32px]"
+              >
+                عرضه اولیه
+              </p>
+            </div>
+            <div
+              class="ml-3 mt-4 py-2 px-4 bg-[#20202029] z-10 rounded-[32px]"
+            >
+              <p class="text-[.9rem] z-20 text-white">20% پیشرفت</p>
+            </div>
+          </div>
+          <div class="text-white z-100 relative mt-60 text-[20px] mr-5">
+            <h2>مجتمع مسکونی پرنیا</h2>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img
+            class="w-[420px] rounded-t-[7px] absolute"
+            src="/public/images/Products/house1.png"
+            alt=""
+          />
+          <div class="absolute flex justify-between w-full z-0">
+            <div class="">
+              <p
+                class="text-[.9rem] text-[#326CED] py-2 px-4 mr-3 mt-4 bg-white rounded-[32px]"
+              >
+                عرضه اولیه
+              </p>
+            </div>
+            <div
+              class="ml-3 mt-4 py-2 px-4 bg-[#20202029] z-10 rounded-[32px] prog"
+            >
+              <p class="text-[.9rem] z-20 text-white">20% پیشرفت</p>
+            </div>
+          </div>
+          <div class="text-white z-100 relative mt-60 text-[20px] mr-5">
+            <h2>مجتمع مسکونی پرنیا</h2>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        paginationClickable: true,
+        spaceBetween: 30,
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".myCardSwiper", {
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
 </html>
