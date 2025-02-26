@@ -1,12 +1,12 @@
 module.exports = {
-  content: ["./*.html", "./**/*.html"], // Ensure Tailwind scans your HTML files
+  content: ["./*.html", "./**/*.html"], 
   theme: {
     extend: {
       colors: {
         base: "#000107",
         primary: "#64A0FF",
-        "blue-100": "#050A24",
-        "blue-200": "#326CED",
+        "blue-800": "#050A24",
+        "blue-100": "#326CED",
         white: "#FFFFFF",
         gray: "#9D9D9D",
         "gray-200": "#606060",
@@ -14,7 +14,7 @@ module.exports = {
         "gray-transparent": "rgba(32, 32, 32, 0.5)",
       },
       fontFamily: {
-        IRANYekan: ["IRANYekan"],
+        IRANYekan: ["IRANYekan", 'sans-serif'],
       },
 
     },
