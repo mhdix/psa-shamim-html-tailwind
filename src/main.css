@@ -3,6 +3,5 @@
 @tailwind utilities;
  
 *, body {
-    @apply font-IRANYekan
-      @apply text-white
+    @apply text-white font-IRANYekan
 }
