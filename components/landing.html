@@ -1,820 +1,633 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/fonts/index.css" />
-    <link rel="stylesheet" href="/src/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
-  <body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
-    <header class="bg-black w-full top-0">
-      <div class="flex items-center justify-around py-4 border-gray">
-        <div class="flex">
-          <img
-            src="/public/images/Lotouslogo.png"
-            alt="Lotous Logo"
-            class="w-[115px]"
-          />
-          <div
-            class="relative w-[450px] h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block"
-          >
-            <input
-              type="text"
-              class="px-7 pt-3 rounded-lg focus:outline-none placeholder-gray-300 hidden lg:block"
-              placeholder="جست و جو"
-            />
-            <div class="absolute inset-y-0 flex items-center">
-              <i class="fas fa-search text-gray-400"></i>
-            </div>
-          </div>
-        </div>
-        <div class="flex">
-          <div
-            class="border rounded-3xl text-white-800 flex items-center justify-center px-4 py-1 gap-3"
-          >
-            <i
-              class="fa fa-sign-in text-xl text-white flex items-center"
-              aria-hidden="true"
-            ></i>
-            <p class="text-white text-xs xl:text-gray-50">ورود / ثبت نام</p>
-          </div>
-          <div class="py-2 px-4 border rounded-3xl mr-5 hidden lg:block">
-            <img src="/public/images/sun.svg" alt="" class="m-auto" />
-          </div>
-        </div>
-      </div>
-      <div class="mt-5 hidden">
-        <ul class="flex text-white font-iranyekan">
-          <li class="pr-4 text-xl">معاملات</li>
-          <li class="pr-4 text-xl">آموزش</li>
-          <li class="pr-4 text-xl">فرصت های سرمایه گذاری</li>
-          <li class="pr-4 text-xl">قوانین</li>
-          <li class="pr-4 text-xl">اخبار</li>
-          <li class="pr-4 text-xl">تماس با ما</li>
-          <li class="pr-4 text-xl">درباره ما</li>
-        </ul>
-      </div>
-    </header>
-    <div class="swiper mySwiper relative">
-      <div class="swiper-wrapper h-[280px] lg:h-[400px]">
-        <div class="swiper-slide relative">
-          <div class="absolute lg:w-full right-4 z-20">
-            <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
-              سامانه مدیریت نقدینگی
-            </h1>
-            <p class="text-sm">
-              خرید و فروش دارایی های توکنیزه شده را در محیطی امن و حرفه ای تجربه
-              کنید
-            </p>
-            <button
-              class="z-20 py-3 px-[21px] bg-blue-800 justify-end absolute left-4 top-52 lg:top-[300px] lg:left-20 rounded-3xl"
-            >
-              <span
-                class="flex align-middle justify-center rounded-3xl text-xs lg:text-lg"
-                >همین حالا ثبت نام کنید</span
-              >
-            </button>
-          </div>
-          <img
-            class="w-full h-full opacity-30 absolute lg:-top-72 lg:h-auto"
-            src="/public/images/slieder1.jfif"
-            alt=""
-          />
-        </div>
-        <div class="swiper-slide relative h-full text-white">
-          <div class="z-20 absolute right-4">
-            <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
-              مدیریت و ردیابی معاملات
-            </h1>
-            <p class="text-sm">
-              سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
-              توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند.
-            </p>
-          </div>
-          <img
-            class="h-full w-full absolute opacity-30 z-0"
-            src="/public/images/slider2.jpg"
-            alt=""
-          />
-        </div>
-        <div class="swiper-slide relative h-full text-white">
-          <div class="z-20 absolute right-4">
-            <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
-              حفظ امنیت و شفافیت
-            </h1>
-            <p class="text-sm">
-              با استفاده از فناوری‌های رمزنگاری و بلاک‌چین، این سامانه از امنیت
-              بالایی برخوردار است.
-            </p>
-          </div>
-          <img
-            class="h-full w-full absolute opacity-30 z-0"
-            src="/public/images/slider3.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
 
-    <div class="w-full py-5 text-center text-[20px] relative">
-      <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
-      <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
-        <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
-          فرصت های سرمایه گذاری
-        </h2>
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
-      </div>
-      <div
-        class="w-[20%] lg:w-[40%] h-[3px] bg-white top-0 mt-[34px] absolute left-0"
-      ></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/public/fonts/index.css" />
+  <link rel="stylesheet" href="/src/output.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <title>Document</title>
+</head>
 
-    <div class="swiper myCardSwiper lg:relative">
-      <div class="swiper-wrapper">
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-60000 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="opacity-50 text-sm"
-                  >شروع سرمایه گذاری : 100,000 تومان</span
-                >
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
+<body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
+  <header class="bg-black w-full top-0">
+    <div class="flex items-center justify-around py-4 border-gray">
+      <div class="flex">
+        <img src="/public/images/Lotouslogo.png" alt="Lotous Logo" class="w-[115px]" />
+        <div class="relative w-[450px] h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block">
+          <input type="text" class="px-7 pt-3 rounded-lg focus:outline-none placeholder-gray-300 hidden lg:block"
+            placeholder="جست و جو" />
+          <div class="absolute inset-y-0 flex items-center">
+            <i class="fas fa-search text-gray-400"></i>
           </div>
         </div>
       </div>
-      <div class="swiper-button-next hidden lg:block"></div>
-      <div class="swiper-button-prev hidden lg:block"></div>
-    </div>
-    <div class="flex items-center relative justify-end pt-5 pl-5">
-      <button
-        class="bg-blue-600 justify-center inline-flex items-center w-3/6 py-2 px-3 lg:w-1/6 rounded-xl"
-      >
-        <span class="align-middle flex">
-          مشاهده همه
-          <i class="fa fa-arrow-left pr-2 mt-1" aria-hidden="true"></i>
-        </span>
-      </button>
-    </div>
-    <div class="w-full py-5 mt-5 text-center text-[20px] relative">
-      <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
-      <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
-        <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
-          مزایای سامانه نقدینگی
-        </h2>
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
-      </div>
-      <div
-        class="w-[20%] lg:w-[40%] h-[3px] bg-white absolute top-0 mt-[34px] left-0"
-      ></div>
-    </div>
-    <p class="w-full text-center px-4 text-xs leading-6">
-      سامانه مدیریت نقدینگی برای خرید و فروش دارایی‌های توکنیزه‌شده طراحی شده تا
-      فرآیندهایی مانند خرید، فروش، انتقال مالکیت، تسویه حساب و نظارت بر معاملات
-      را به شکلی شفاف، ایمن و کارآمد انجام دهد.
-    </p>
-    <div
-      class="grid grid-cols-2 w-full gap-2 px-2 pt-5 lg:grid-cols-4 pb-6 lg:gap-4"
-    >
-      <div class="h-72 bg-[#050a24] rounded-md">
-        <img class="w-10 mr-6 mt-6" src="/public/images/setting.svg" alt="" />
-        <div class="lg:py-5">
-          <p class="py-6 pr-1 text-xs lg:text-sm lg:pr-4">
-            پشتیبانی از توکن‌سازی دارایی‌ها
-          </p>
-          <p class="text-xs px-3 text-justify lg:text-sm">
-            این سامانه قابلیت تبدیل دارایی‌های فیزیکی یا دیجیتال به توکن‌های
-            مبتنی بر بلاک‌چین را دارد. این توکن‌ها می‌توانند انواع مختلف
-            دارایی‌ها نظیر املاک، سهام، ارزهای دیجیتال و حتی آثار هنری باشند.
-          </p>
+      <div class="flex">
+        <div class="border rounded-3xl text-white-800 flex items-center justify-center px-4 py-1 gap-3">
+          <i class="fa fa-sign-in text-xl text-white flex items-center" aria-hidden="true"></i>
+          <p class="text-white text-xs xl:text-gray-50">ورود / ثبت نام</p>
         </div>
-      </div>
-      <div class="h-72 bg-[#050a24] rounded-md">
-        <img class="w-10 mr-6 mt-6" src="/public/images/social.svg" alt="" />
-        <div class="lg:py-5">
-          <p class="py-6 px-1 text-xs lg:text-sm lg:pr-4">
-            مدیریت و ردیابی معاملات
-          </p>
-          <p class="text-xs px-3 text-justify lg:text-sm">
-            سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
-            توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند. این داده‌ها به‌صورت
-            غیرقابل تغییر در بلاک‌چین ذخیره می‌شوند
-          </p>
-        </div>
-      </div>
-      <div class="h-72 bg-[#050a24] rounded-md">
-        <img class="w-10 mr-6 mt-6" src="/public/images/protect.svg" alt="" />
-        <div class="lg:py-5">
-          <p class="py-6 px-1 text-xs lg:text-sm lg:pr-4">حفظ امنیت و شفافیت</p>
-          <p class="text-xs px-3 text-justify lg:text-sm">
-            این سامانه قابلیت تبدیل دارایی‌های فیزیکی یا دیجیتال به توکن‌های
-            مبتنی بر بلاک‌چین را دارد. این توکن‌ها می‌توانند انواع مختلف
-            دارایی‌ها نظیر املاک، سهام، ارزهای دیجیتال و حتی آثار هنری باشند.
-          </p>
-        </div>
-      </div>
-      <div class="h-72 bg-[#050a24] rounded-md">
-        <img class="w-10 mr-6 mt-6" src="/public/images/doller.svg" alt="" />
-        <div class="lg:py-5">
-          <p class="py-6 px-1 text-[10px] lg:text-sm lg:pr-4">
-            سهولت دسترسی به دارایی‌های نقدی
-          </p>
-          <p class="text-xs px-4 text-justify lg:text-sm">
-            با توکنیزه کردن دارایی‌ها، دارندگان دارایی‌های فیزیکی می‌توانند به
-            راحتی به نقدینگی دسترسی پیدا کنند، بدون اینکه نیاز به فروش فیزیکی
-            دارایی‌ها داشته باشند.
-          </p>
+        <div class="py-2 px-4 border rounded-3xl mr-5 hidden lg:block">
+          <img src="/public/images/sun.svg" alt="" class="m-auto" />
         </div>
       </div>
     </div>
-    <div class="px-5">
-      <p class="text-blue-600">ابزار تحلیل و چارت قیمتی</p>
-      <p class="py-5">
-        تحلیل و چارت قیمتی ابزارهای اساسی برای هر تریدر یا سرمایه‌گذار هستند. با
-        استفاده از این ابزارها، شما می‌توانید روندهای بازار را بهتر شناسایی کرده
-        و تصمیمات معاملاتی هوشمندانه‌تری بگیرید. برای موفقیت در تحلیل تکنیکال،
-        باید علاوه بر تسلط بر این ابزارها، تجربه کافی در شناخت بازار و مدیریت
-        ریسک نیز داشته باشید.
-      </p>
+    <div class="mt-5 hidden">
+      <ul class="flex text-white font-iranyekan">
+        <li class="pr-4 text-xl">معاملات</li>
+        <li class="pr-4 text-xl">آموزش</li>
+        <li class="pr-4 text-xl">فرصت های سرمایه گذاری</li>
+        <li class="pr-4 text-xl">قوانین</li>
+        <li class="pr-4 text-xl">اخبار</li>
+        <li class="pr-4 text-xl">تماس با ما</li>
+        <li class="pr-4 text-xl">درباره ما</li>
+      </ul>
     </div>
-
-    <div class="w-full p-5 lg:grid lg:grid-cols-5">
-      <img
-        class="mx-auto col-span-2 w-56 lg:w-auto pt-5"
-        src="/public/images/laptop.png"
-        alt=""
-      />
-      <div class="flex flex-col col-span-3 py-5">
-        <span class="text-blue-600 py-5 text-xl"> سرويس كپي تريدينگ </span>
-        <p class="text-justify">
-          سرویس کپی تریدینگ (Copy Trading) یا تریدینگ کپی یک روش سرمایه‌گذاری
-          است که به شما اجازه می‌دهد تا معاملات افراد موفق یا حرفه‌ای‌تر را در
-          بازارهای مالی کپی کنید. به عبارت دیگر، در این سیستم شما می‌توانید با
-          انتخاب یک یا چند تریدر حرفه‌ای، معاملات آن‌ها را در حساب خود کپی کنید
-          و بدون نیاز به تحلیل و بررسی شخصی، از استراتژی‌های آن‌ها بهره‌مند
-          شوید.
-        </p>
-        <div class="flex items-center relative justify-end">
+  </header>
+  <div class="swiper mySwiper relative">
+    <div class="swiper-wrapper h-[280px] lg:h-[400px]">
+      <div class="swiper-slide relative">
+        <div class="absolute lg:w-full right-4 z-20">
+          <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
+            سامانه مدیریت نقدینگی
+          </h1>
+          <p class="text-sm">
+            خرید و فروش دارایی های توکنیزه شده را در محیطی امن و حرفه ای تجربه
+            کنید
+          </p>
           <button
-            class="bg-blue-600 justify-center inline-flex items-center py-2 px-3 lg:w-[180px] rounded-xl"
-          >
-            <span class="align-middle flex"> همین حالا شروع کنید </span>
+            class="z-20 py-3 px-[21px] bg-blue-800 justify-end absolute left-4 top-52 lg:top-[300px] lg:left-20 rounded-3xl">
+            <span class="flex align-middle justify-center rounded-3xl text-xs lg:text-lg">همین حالا ثبت نام کنید</span>
           </button>
         </div>
+        <img class="w-full h-full opacity-30 absolute lg:-top-72 lg:h-auto" src="/public/images/slieder1.jfif" alt="" />
+      </div>
+      <div class="swiper-slide relative h-full text-white">
+        <div class="z-20 absolute right-4">
+          <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
+            مدیریت و ردیابی معاملات
+          </h1>
+          <p class="text-sm">
+            سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
+            توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند.
+          </p>
+        </div>
+        <img class="h-full w-full absolute opacity-30 z-0" src="/public/images/slider2.jpg" alt="" />
+      </div>
+      <div class="swiper-slide relative h-full text-white">
+        <div class="z-20 absolute right-4">
+          <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
+            حفظ امنیت و شفافیت
+          </h1>
+          <p class="text-sm">
+            با استفاده از فناوری‌های رمزنگاری و بلاک‌چین، این سامانه از امنیت
+            بالایی برخوردار است.
+          </p>
+        </div>
+        <img class="h-full w-full absolute opacity-30 z-0" src="/public/images/slider3.jpg" alt="" />
       </div>
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <div class="w-full py-5 mt-5 text-center text-[20px] relative">
-      <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
-      <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
-        <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
-          درباره سامانه نقدینگی
-        </h2>
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+  <div class="w-full py-5 text-center text-[20px] relative">
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
+    <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+      <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
+        فرصت های سرمایه گذاری
+      </h2>
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+    </div>
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white top-0 mt-[34px] absolute left-0"></div>
+  </div>
+
+  <div class="swiper myCardSwiper lg:relative">
+    <div class="swiper-wrapper">
+      <div
+        class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+        <div class="flex absolute top-4 justify-between w-full">
+          <div class="">
+            <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary">
+              عرضه اولیه
+            </p>
+          </div>
+          <div class="text-white bg-gray-transparent relative rounded-3xl ml-2">
+            <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+          </div>
+        </div>
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">مجتمع مسکونی پرنیا</h2>
+          <div class="opacity-30 text-white text-sm mt-4">
+            <span class="pl-12">PRNI</span>
+            <span>تهران _ منطقه1_ مسکونی</span>
+          </div>
+          <div class="mt-5">
+            <span class="opacity-50 text-xs"><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+              انتشار: 1403/12/12</span>
+            <span class="opacity-50 text-xs mr-3">
+              <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+              مدت اعتبار: 36 ماه
+            </span>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
+            </div>
+            <div class="mt-5 text-lg lg:mt-3">
+              <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+            </div>
+            <div
+              class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+              <button class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1">
+                شروع سرمایه گذاری
+              </button>
+              <button class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg">
+                مشاهده جزئیات
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="w-[20%] lg:w-[40%] h-[3px] bg-white absolute top-0 mt-[34px] left-0"
-      ></div>
-    </div>
-
-    <div class="w-full p-5 lg:grid lg:grid-cols-5">
-      <img
-        class="mx-auto col-span-2 w-72 lg:w-auto pt-5"
-        src="/public/images/cashOut.png"
-        alt=""
-      />
-      <div class="flex flex-col col-span-3 py-5">
-        <span class="text-white py-5 text-xl lg:-mr-12"
-          >سامانه مدیریت نقدینگی</span
-        >
-        <p class="text-justify">
-          سامانه مدیریت نقدینگی با تمرکز ویژه بر خرید و فروش دارایی‌های
-          توکنیزه‌شده، به‌عنوان یک ابزار نوآورانه و پیشرفته در حوزه مالی و
-          سرمایه‌گذاری دیجیتال معرفی می‌شود. این سامانه به‌طور خاص برای تسهیل،
-          نظارت و مدیریت فرآیندهای مرتبط با دارایی‌هایی طراحی شده که به توکن‌های
-          دیجیتال تبدیل شده‌اند. دارایی‌های توکنیزه‌شده می‌توانند شامل انواع
-          مختلفی از دارایی‌ها باشند؛ از جمله سهام، املاک، ارزهای دیجیتال،
-          کالاها، و حتی آثار هنری که به‌صورت توکن‌های مبتنی بر بلاک‌چین ذخیره و
-          منتقل می‌شوند.
-        </p>
-        <p class="lg:w-[60%] lg:py-8 text-justify max-sm:mt-12">
-          سامانه مدیریت نقدینگی با تمرکز ویژه بر خرید و فروش دارایی‌های
-          توکنیزه‌شده، به‌عنوان یک ابزار نوآورانه و پیشرفته در حوزه مالی و
-          سرمایه‌گذاری دیجیتال معرفی می‌شود. این سامانه به‌طور خاص برای تسهیل،
-          نظارت و مدیریت فرآیندهای مرتبط با دارایی‌هایی طراحی شده که به توکن‌های
-          دیجیتال تبدیل شده‌اند. دارایی‌های توکنیزه‌شده می‌توانند شامل انواع
-          مختلفی از دارایی‌ها باشند؛ از جمله سهام، املاک، ارزهای دیجیتال،
-          کالاها، و حتی آثار هنری که به‌صورت توکن‌های مبتنی بر بلاک‌چین ذخیره و
-          منتقل می‌شوند.
-        </p>
-      </div>
-    </div>
-
-    <div class="w-full py-5 mt-5 text-center text-[20px] relative">
-      <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
-      <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
-        <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
-          اخبار سامانه نقدینگی
-        </h2>
-        <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+        class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+        <div class="flex absolute top-4 justify-between w-full">
+          <div class="">
+            <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary">
+              عرضه اولیه
+            </p>
+          </div>
+          <div class="text-white bg-gray-transparent relative rounded-3xl ml-2">
+            <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+          </div>
+        </div>
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">مجتمع مسکونی پرنیا</h2>
+          <div class="opacity-30 text-white text-sm mt-4">
+            <span class="pl-12">PRNI</span>
+            <span>تهران _ منطقه1_ مسکونی</span>
+          </div>
+          <div class="mt-5">
+            <span class="opacity-50 text-xs"><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+              انتشار: 1403/12/12</span>
+            <span class="opacity-50 text-xs mr-3">
+              <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+              مدت اعتبار: 36 ماه
+            </span>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
+            </div>
+            <div class="mt-5 text-lg lg:mt-3">
+              <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+            </div>
+            <div
+              class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+              <button class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1">
+                شروع سرمایه گذاری
+              </button>
+              <button class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg">
+                مشاهده جزئیات
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="w-[20%] lg:w-[40%] h-[3px] bg-white absolute top-0 mt-[34px] left-0"
-      ></div>
+        class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+        <div class="flex absolute top-4 justify-between w-full">
+          <div class="">
+            <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary">
+              عرضه اولیه
+            </p>
+          </div>
+          <div class="text-white bg-gray-transparent relative rounded-3xl ml-2">
+            <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+          </div>
+        </div>
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">مجتمع مسکونی پرنیا</h2>
+          <div class="opacity-30 text-white text-sm mt-4">
+            <span class="pl-12">PRNI</span>
+            <span>تهران _ منطقه1_ مسکونی</span>
+          </div>
+          <div class="mt-5">
+            <span class="opacity-50 text-xs"><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+              انتشار: 1403/12/12</span>
+            <span class="opacity-50 text-xs mr-3">
+              <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+              مدت اعتبار: 36 ماه
+            </span>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
+            </div>
+            <div class="mt-5 text-lg lg:mt-3">
+              <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+            </div>
+            <div
+              class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+              <button class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1">
+                شروع سرمایه گذاری
+              </button>
+              <button class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg">
+                مشاهده جزئیات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+        <div class="flex absolute top-4 justify-between w-full">
+          <div class="">
+            <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary">
+              عرضه اولیه
+            </p>
+          </div>
+          <div class="text-white bg-gray-transparent relative rounded-3xl ml-2">
+            <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+          </div>
+        </div>
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">مجتمع مسکونی پرنیا</h2>
+          <div class="opacity-30 text-white text-sm mt-4">
+            <span class="pl-12">PRNI</span>
+            <span>تهران _ منطقه1_ مسکونی</span>
+          </div>
+          <div class="mt-5">
+            <span class="opacity-50 text-xs"><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+              انتشار: 1403/12/12</span>
+            <span class="opacity-50 text-xs mr-3">
+              <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+              مدت اعتبار: 36 ماه
+            </span>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
+            </div>
+            <div class="mt-5 text-lg lg:mt-3">
+              <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+            </div>
+            <div
+              class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+              <button class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1">
+                شروع سرمایه گذاری
+              </button>
+              <button class="px-[25px] py-2 border border-blue-600 text-blue-60000 rounded-lg">
+                مشاهده جزئیات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+        <div class="flex absolute top-4 justify-between w-full">
+          <div class="">
+            <p class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary">
+              عرضه اولیه
+            </p>
+          </div>
+          <div class="text-white bg-gray-transparent relative rounded-3xl ml-2">
+            <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+          </div>
+        </div>
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">مجتمع مسکونی پرنیا</h2>
+          <div class="opacity-30 text-white text-sm mt-4">
+            <span class="pl-12">PRNI</span>
+            <span>تهران _ منطقه1_ مسکونی</span>
+          </div>
+          <div class="mt-5">
+            <span class="opacity-50 text-xs"><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+              انتشار: 1403/12/12</span>
+            <span class="opacity-50 text-xs mr-3">
+              <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+              مدت اعتبار: 36 ماه
+            </span>
+            <div class="mt-6 lg:mt-4">
+              <span class="opacity-50 text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
+            </div>
+            <div class="mt-5 text-lg lg:mt-3">
+              <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+            </div>
+            <div
+              class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+              <button class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1">
+                شروع سرمایه گذاری
+              </button>
+              <button class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg">
+                مشاهده جزئیات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="swiper-button-next hidden lg:block"></div>
+    <div class="swiper-button-prev hidden lg:block"></div>
+  </div>
+  <div class="flex items-center relative justify-end pt-5 pl-5">
+    <button class="bg-blue-600 justify-center inline-flex items-center w-3/6 py-2 px-3 lg:w-1/6 rounded-xl">
+      <span class="align-middle flex">
+        مشاهده همه
+        <i class="fa fa-arrow-left pr-2 mt-1" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="w-full py-5 mt-5 text-center text-[20px] relative">
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
+    <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+      <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
+        مزایای سامانه نقدینگی
+      </h2>
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+    </div>
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white absolute top-0 mt-[34px] left-0"></div>
+  </div>
+  <p class="w-full text-center px-4 text-xs leading-6">
+    سامانه مدیریت نقدینگی برای خرید و فروش دارایی‌های توکنیزه‌شده طراحی شده تا
+    فرآیندهایی مانند خرید، فروش، انتقال مالکیت، تسویه حساب و نظارت بر معاملات
+    را به شکلی شفاف، ایمن و کارآمد انجام دهد.
+  </p>
+  <div class="grid grid-cols-2 w-full gap-2 px-2 pt-5 lg:grid-cols-4 pb-6 lg:gap-4">
+    <div class="h-72 bg-[#050a24] rounded-md">
+      <img class="w-10 mr-6 mt-6" src="/public/images/setting.svg" alt="" />
+      <div class="lg:py-5">
+        <p class="py-6 pr-1 text-xs lg:text-sm lg:pr-4">
+          پشتیبانی از توکن‌سازی دارایی‌ها
+        </p>
+        <p class="text-xs px-3 text-justify lg:text-sm">
+          این سامانه قابلیت تبدیل دارایی‌های فیزیکی یا دیجیتال به توکن‌های
+          مبتنی بر بلاک‌چین را دارد. این توکن‌ها می‌توانند انواع مختلف
+          دارایی‌ها نظیر املاک، سهام، ارزهای دیجیتال و حتی آثار هنری باشند.
+        </p>
+      </div>
+    </div>
+    <div class="h-72 bg-[#050a24] rounded-md">
+      <img class="w-10 mr-6 mt-6" src="/public/images/social.svg" alt="" />
+      <div class="lg:py-5">
+        <p class="py-6 px-1 text-xs lg:text-sm lg:pr-4">
+          مدیریت و ردیابی معاملات
+        </p>
+        <p class="text-xs px-3 text-justify lg:text-sm">
+          سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
+          توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند. این داده‌ها به‌صورت
+          غیرقابل تغییر در بلاک‌چین ذخیره می‌شوند
+        </p>
+      </div>
+    </div>
+    <div class="h-72 bg-[#050a24] rounded-md">
+      <img class="w-10 mr-6 mt-6" src="/public/images/protect.svg" alt="" />
+      <div class="lg:py-5">
+        <p class="py-6 px-1 text-xs lg:text-sm lg:pr-4">حفظ امنیت و شفافیت</p>
+        <p class="text-xs px-3 text-justify lg:text-sm">
+          این سامانه قابلیت تبدیل دارایی‌های فیزیکی یا دیجیتال به توکن‌های
+          مبتنی بر بلاک‌چین را دارد. این توکن‌ها می‌توانند انواع مختلف
+          دارایی‌ها نظیر املاک، سهام، ارزهای دیجیتال و حتی آثار هنری باشند.
+        </p>
+      </div>
+    </div>
+    <div class="h-72 bg-[#050a24] rounded-md">
+      <img class="w-10 mr-6 mt-6" src="/public/images/doller.svg" alt="" />
+      <div class="lg:py-5">
+        <p class="py-6 px-1 text-[10px] lg:text-sm lg:pr-4">
+          سهولت دسترسی به دارایی‌های نقدی
+        </p>
+        <p class="text-xs px-4 text-justify lg:text-sm">
+          با توکنیزه کردن دارایی‌ها، دارندگان دارایی‌های فیزیکی می‌توانند به
+          راحتی به نقدینگی دسترسی پیدا کنند، بدون اینکه نیاز به فروش فیزیکی
+          دارایی‌ها داشته باشند.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="px-5">
+    <p class="text-blue-600">ابزار تحلیل و چارت قیمتی</p>
+    <p class="py-5">
+      تحلیل و چارت قیمتی ابزارهای اساسی برای هر تریدر یا سرمایه‌گذار هستند. با
+      استفاده از این ابزارها، شما می‌توانید روندهای بازار را بهتر شناسایی کرده
+      و تصمیمات معاملاتی هوشمندانه‌تری بگیرید. برای موفقیت در تحلیل تکنیکال،
+      باید علاوه بر تسلط بر این ابزارها، تجربه کافی در شناخت بازار و مدیریت
+      ریسک نیز داشته باشید.
+    </p>
+  </div>
 
-    <div class="swiper myBlogSwiper lg:relative pb-5">
-      <div class="swiper-wrapper">
-        <div
-          class="w-fit swiper-slide bg-[#050a24] relative h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
+  <div class="w-full p-5 lg:grid lg:grid-cols-5">
+    <img class="mx-auto col-span-2 w-56 lg:w-auto pt-5" src="/public/images/laptop.png" alt="" />
+    <div class="flex flex-col col-span-3 py-5">
+      <span class="text-blue-600 py-5 text-xl"> سرويس كپي تريدينگ </span>
+      <p class="text-justify">
+        سرویس کپی تریدینگ (Copy Trading) یا تریدینگ کپی یک روش سرمایه‌گذاری
+        است که به شما اجازه می‌دهد تا معاملات افراد موفق یا حرفه‌ای‌تر را در
+        بازارهای مالی کپی کنید. به عبارت دیگر، در این سیستم شما می‌توانید با
+        انتخاب یک یا چند تریدر حرفه‌ای، معاملات آن‌ها را در حساب خود کپی کنید
+        و بدون نیاز به تحلیل و بررسی شخصی، از استراتژی‌های آن‌ها بهره‌مند
+        شوید.
+      </p>
+      <div class="flex items-center relative justify-end">
+        <button class="bg-blue-600 justify-center inline-flex items-center py-2 px-3 lg:w-[180px] rounded-xl">
+          <span class="align-middle flex"> همین حالا شروع کنید </span>
+        </button>
+      </div>
+    </div>
+  </div>
 
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">موضوع</h2>
-            <div class="text-white text-sm mt-4"></div>
-            <div class="mt-5">
-              <h2>تیتر مهم خبر</h2>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm"
-                  >در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
-                  با انبوهی از…</span
-                >
-              </div>
-              <div class="mt-3 text-lg lg:mt-3 grid grid-cols-6">
-                <div class="col-span-2 opacity-30">
-                  <div class="flex-row flex">
-                    <img
-                      class="w-3"
-                      src="/public/images/calendar-alt.svg"
-                      alt=""
-                    />
-                    <span class="text-[8px] px-2">1403/09/09</span>
-                  </div>
-                  <div class="flex-row flex">
-                    <img class="w-3" src="/public/images/eye.svg" alt="" />
-                    <span class="text-[8px] px-2">110 بازدید</span>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-row text-xs col-span-4 justify-end ml-4 lg:mt-[40px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-                >
-                  <button class="px-4 text-[#64A0FF]">ادامه مطلب</button>
-                  <img
-                    class="ml-4 w-5"
-                    src="/public/images/arrowleft.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
+  <div class="w-full py-5 mt-5 text-center text-[20px] relative">
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
+    <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+      <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
+        درباره سامانه نقدینگی
+      </h2>
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+    </div>
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white absolute top-0 mt-[34px] left-0"></div>
+  </div>
+
+  <div class="w-full p-5 lg:grid lg:grid-cols-5">
+    <img class="mx-auto col-span-2 w-72 lg:w-auto pt-5" src="/public/images/cashOut.png" alt="" />
+    <div class="flex flex-col col-span-3 py-5">
+      <span class="text-white py-5 text-xl lg:-mr-12">سامانه مدیریت نقدینگی</span>
+      <p class="text-justify">
+        سامانه مدیریت نقدینگی با تمرکز ویژه بر خرید و فروش دارایی‌های
+        توکنیزه‌شده، به‌عنوان یک ابزار نوآورانه و پیشرفته در حوزه مالی و
+        سرمایه‌گذاری دیجیتال معرفی می‌شود. این سامانه به‌طور خاص برای تسهیل،
+        نظارت و مدیریت فرآیندهای مرتبط با دارایی‌هایی طراحی شده که به توکن‌های
+        دیجیتال تبدیل شده‌اند. دارایی‌های توکنیزه‌شده می‌توانند شامل انواع
+        مختلفی از دارایی‌ها باشند؛ از جمله سهام، املاک، ارزهای دیجیتال،
+        کالاها، و حتی آثار هنری که به‌صورت توکن‌های مبتنی بر بلاک‌چین ذخیره و
+        منتقل می‌شوند.
+      </p>
+      <p class="lg:w-[60%] lg:py-8 text-justify max-sm:mt-12">
+        سامانه مدیریت نقدینگی با تمرکز ویژه بر خرید و فروش دارایی‌های
+        توکنیزه‌شده، به‌عنوان یک ابزار نوآورانه و پیشرفته در حوزه مالی و
+        سرمایه‌گذاری دیجیتال معرفی می‌شود. این سامانه به‌طور خاص برای تسهیل،
+        نظارت و مدیریت فرآیندهای مرتبط با دارایی‌هایی طراحی شده که به توکن‌های
+        دیجیتال تبدیل شده‌اند. دارایی‌های توکنیزه‌شده می‌توانند شامل انواع
+        مختلفی از دارایی‌ها باشند؛ از جمله سهام، املاک، ارزهای دیجیتال،
+        کالاها، و حتی آثار هنری که به‌صورت توکن‌های مبتنی بر بلاک‌چین ذخیره و
+        منتقل می‌شوند.
+      </p>
+    </div>
+  </div>
+
+  <div class="w-full py-5 mt-5 text-center text-[20px] relative">
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white mt-3.5 absolute"></div>
+    <div class="flex justify-between w-[60%] lg:w-[20%] m-auto">
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+      <h2 class="text-blue-400 max-sm:text-sm max-sm:mt-1">
+        اخبار سامانه نقدینگی
+      </h2>
+      <div class="w-[15px] h-[15px] bg-white rounded-full mt-2"></div>
+    </div>
+    <div class="w-[20%] lg:w-[40%] h-[3px] bg-white absolute top-0 mt-[34px] left-0"></div>
+  </div>
+
+  <div class="swiper myBlogSwiper lg:relative pb-5">
+    <div class="swiper-wrapper">
+      <div
+        class="w-fit swiper-slide bg-[#050a24] relative h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">موضوع</h2>
+          <div class="text-white text-sm mt-4"></div>
+          <div class="mt-5">
+            <h2>تیتر مهم خبر</h2>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
+                با انبوهی از…</span>
             </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide bg-[#050a24] relative h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">موضوع</h2>
-            <div class="text-white text-sm mt-4"></div>
-            <div class="mt-5">
-              <h2>تیتر مهم خبر</h2>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm"
-                  >در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
-                  با انبوهی از…</span
-                >
-              </div>
-              <div class="mt-3 text-lg lg:mt-3 grid grid-cols-6">
-                <div class="col-span-2 opacity-30">
-                  <div class="flex-row flex">
-                    <img
-                      class="w-3"
-                      src="/public/images/calendar-alt.svg"
-                      alt=""
-                    />
-                    <span class="text-[8px] px-2">1403/09/09</span>
-                  </div>
-                  <div class="flex-row flex">
-                    <img class="w-3" src="/public/images/eye.svg" alt="" />
-                    <span class="text-[8px] px-2">110 بازدید</span>
-                  </div>
+            <div class="mt-3 text-lg lg:mt-3 grid grid-cols-6">
+              <div class="col-span-2 opacity-30">
+                <div class="flex-row flex">
+                  <img class="w-3" src="/public/images/calendar-alt.svg" alt="" />
+                  <span class="text-[8px] px-2">1403/09/09</span>
                 </div>
-                <div
-                  class="flex flex-row text-xs col-span-4 justify-end ml-4 lg:mt-[40px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-                >
-                  <button class="px-4 text-[#64A0FF]">ادامه مطلب</button>
-                  <img
-                    class="ml-4 w-5"
-                    src="/public/images/arrowleft.svg"
-                    alt=""
-                  />
+                <div class="flex-row flex">
+                  <img class="w-3" src="/public/images/eye.svg" alt="" />
+                  <span class="text-[8px] px-2">110 بازدید</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide bg-[#050a24] relative h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">موضوع</h2>
-            <div class="text-white text-sm mt-4"></div>
-            <div class="mt-5">
-              <h2>تیتر مهم خبر</h2>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm"
-                  >در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
-                  با انبوهی از…</span
-                >
-              </div>
-              <div class="mt-3 text-lg lg:mt-5 grid grid-cols-6">
-                <div class="col-span-2 opacity-30">
-                  <div class="flex-row flex">
-                    <img
-                      class="w-3"
-                      src="/public/images/calendar-alt.svg"
-                      alt=""
-                    />
-                    <span class="text-[8px] px-2">1403/09/09</span>
-                  </div>
-                  <div class="flex-row flex">
-                    <img class="w-3" src="/public/images/eye.svg" alt="" />
-                    <span class="text-[8px] px-2">110 بازدید</span>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-row text-xs col-span-4 justify-end ml-4 lg:mt-[40px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-                >
-                  <button class="px-4 text-[#64A0FF]">ادامه مطلب</button>
-                  <img
-                    class="ml-4 w-5"
-                    src="/public/images/arrowleft.svg"
-                    alt=""
-                  />
-                </div>
+              <div
+                class="flex flex-row text-xs col-span-4 justify-end ml-4 lg:mt-[40px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+                <button class="px-4 text-[#64A0FF]">ادامه مطلب</button>
+                <img class="ml-4 w-5" src="/public/images/arrowleft.svg" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div
+        class="w-fit swiper-slide bg-[#050a24] relative h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">موضوع</h2>
+          <div class="text-white text-sm mt-4"></div>
+          <div class="mt-5">
+            <h2>تیتر مهم خبر</h2>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
+                با انبوهی از…</span>
+            </div>
+            <div class="mt-3 text-lg lg:mt-3 grid grid-cols-6">
+              <div class="col-span-2 opacity-30">
+                <div class="flex-row flex">
+                  <img class="w-3" src="/public/images/calendar-alt.svg" alt="" />
+                  <span class="text-[8px] px-2">1403/09/09</span>
+                </div>
+                <div class="flex-row flex">
+                  <img class="w-3" src="/public/images/eye.svg" alt="" />
+                  <span class="text-[8px] px-2">110 بازدید</span>
+                </div>
+              </div>
+              <div
+                class="flex flex-row text-xs col-span-4 justify-end ml-4 lg:mt-[40px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+                <button class="px-4 text-[#64A0FF]">ادامه مطلب</button>
+                <img class="ml-4 w-5" src="/public/images/arrowleft.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-fit swiper-slide bg-[#050a24] relative h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]">
+        <img class="rounded-t-[7px] w-full" src="/public/images/Products/house1.png" alt="" />
+
+        <div class="text-white mt-2 mr-5 text-xl relative">
+          <h2 class="">موضوع</h2>
+          <div class="text-white text-sm mt-4"></div>
+          <div class="mt-5">
+            <h2>تیتر مهم خبر</h2>
+            <div class="mt-6 lg:mt-4">
+              <span class="text-sm">در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
+                با انبوهی از…</span>
+            </div>
+            <div class="mt-3 text-lg lg:mt-5 grid grid-cols-6">
+              <div class="col-span-2 opacity-30">
+                <div class="flex-row flex">
+                  <img class="w-3" src="/public/images/calendar-alt.svg" alt="" />
+                  <span class="text-[8px] px-2">1403/09/09</span>
+                </div>
+                <div class="flex-row flex">
+                  <img class="w-3" src="/public/images/eye.svg" alt="" />
+                  <span class="text-[8px] px-2">110 بازدید</span>
+                </div>
+              </div>
+              <div
+                class="flex flex-row text-xs col-span-4 justify-end ml-4 lg:mt-[40px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm">
+                <button class="px-4 text-[#64A0FF]">ادامه مطلب</button>
+                <img class="ml-4 w-5" src="/public/images/arrowleft.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.tailwindcss.com/"></script>
-    <script>
-      var windowSize = window.innerWidth;
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <script>
+    var windowSize = window.innerWidth;
 
-      var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        paginationClickable: true,
-        spaceBetween: 30,
-        loop: true,
-      });
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      paginationClickable: true,
+      spaceBetween: 30,
+      loop: true,
+    });
 
-      var cardSwiper = new Swiper(".myCardSwiper", {
-        slidesPerView: windowSize > 430 ? 3 : 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+    var cardSwiper = new Swiper(".myCardSwiper", {
+      slidesPerView: windowSize > 430 ? 3 : 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
-      var blogSwiper = new Swiper(".myBlogSwiper", {
-        slidesPerView: windowSize > 430 ? 3 : 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-  </body>
+    var blogSwiper = new Swiper(".myBlogSwiper", {
+      slidesPerView: windowSize > 430 ? 3 : 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
 </html>
