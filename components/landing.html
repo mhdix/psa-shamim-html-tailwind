@@ -16,113 +16,94 @@
     <title>Document</title>
   </head>
 
-  <body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
-    <header class="bg-black w-full top-0">
-      <div class="flex items-center justify-around py-4 border-gray">
-        <div class="flex">
-          <img
-            src="/public/images/Lotouslogo.png"
-            alt="Lotous Logo"
-            class="w-[115px]"
-          />
-          <div
-            class="relative w-[450px] h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block"
-          >
-            <input
-              type="text"
-              class="px-7 pt-3 rounded-lg focus:outline-none placeholder-gray-300 hidden lg:block"
-              placeholder="جست و جو"
-            />
-            <div class="absolute inset-y-0 flex items-center">
-              <i class="fas fa-search text-gray-400"></i>
-            </div>
-          </div>
-        </div>
-        <div class="flex">
-          <div
-            class="border rounded-3xl text-white-800 flex items-center justify-center px-4 py-1 gap-3"
-          >
-            <i
-              class="fa fa-sign-in text-xl text-white flex items-center"
-              aria-hidden="true"
-            ></i>
-            <p class="text-white text-xs xl:text-gray-50">ورود / ثبت نام</p>
-          </div>
-          <div class="py-2 px-4 border rounded-3xl mr-5 hidden lg:block">
-            <img src="/public/images/sun.svg" alt="" class="m-auto" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/public/fonts/index.css" />
+  <link rel="stylesheet" href="/src/output.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" href="/public/images/Lotouslogo.png">
+
+  <title>Document</title>
+</head>
+
+<body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
+  <header class="bg-black w-full top-0">
+    <div class="flex items-center justify-around py-4 border-gray">
+      <div class="flex">
+        <img src="/public/images/Lotouslogo.png" alt="Lotous Logo" class="w-[115px]" />
+        <div class="relative w-[450px] h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block">
+          <input type="text" class="px-7 pt-3 rounded-lg focus:outline-none placeholder-gray-300 hidden lg:block"
+            placeholder="جست و جو" />
+          <div class="absolute inset-y-0 flex items-center">
+            <i class="fas fa-search text-gray-400"></i>
           </div>
         </div>
       </div>
-      <div class="hidden lg:block py-4">
-        <ul class="flex text-white font-iranyekan">
-          <li class="pr-4 text-xl">معاملات</li>
-          <li class="pr-4 text-xl">آموزش</li>
-          <li class="pr-4 text-xl">فرصت های سرمایه گذاری</li>
-          <li class="pr-4 text-xl">قوانین</li>
-          <li class="pr-4 text-xl">اخبار</li>
-          <li class="pr-4 text-xl">تماس با ما</li>
-          <li class="pr-4 text-xl">درباره ما</li>
-        </ul>
+      <div class="flex">
+        <div class="border rounded-3xl text-white-800 flex items-center justify-center px-4 py-1 gap-3">
+          <i class="fa fa-sign-in text-xl text-white flex items-center" aria-hidden="true"></i>
+          <p class="text-white text-xs xl:text-gray-50">ورود / ثبت نام</p>
+        </div>
+        <div class="py-2 px-4 border rounded-3xl mr-5 hidden lg:block">
+          <img src="/public/images/sun.svg" alt="" class="m-auto" />
+        </div>
       </div>
-    </header>
-    <div class="swiper mySwiper relative">
-      <div class="swiper-wrapper h-[280px] lg:h-[400px]">
-        <div class="swiper-slide relative">
-          <div class="absolute lg:w-full right-4 z-20">
-            <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
-              سامانه مدیریت نقدینگی
-            </h1>
-            <p class="text-sm">
-              خرید و فروش دارایی های توکنیزه شده را در محیطی امن و حرفه ای تجربه
-              کنید
-            </p>
-            <button
-              class="z-20 py-3 px-[21px] bg-blue-800 justify-end absolute left-4 top-52 lg:top-[300px] lg:left-20 rounded-3xl"
-            >
-              <span
-                class="flex align-middle justify-center rounded-3xl text-xs lg:text-lg"
-                >همین حالا ثبت نام کنید</span
-              >
-            </button>
-          </div>
-          <img
-            class="w-full h-full opacity-30 absolute lg:-top-72 lg:h-auto"
-            src="/public/images/slieder1.jfif"
-            alt=""
-          />
+    </div>
+    <div class="mt-5 hidden">
+      <ul class="flex text-white font-iranyekan">
+        <li class="pr-4 text-xl">معاملات</li>
+        <li class="pr-4 text-xl">آموزش</li>
+        <li class="pr-4 text-xl">فرصت های سرمایه گذاری</li>
+        <li class="pr-4 text-xl">قوانین</li>
+        <li class="pr-4 text-xl">اخبار</li>
+        <li class="pr-4 text-xl">تماس با ما</li>
+        <li class="pr-4 text-xl">درباره ما</li>
+      </ul>
+    </div>
+  </header>
+  <div class="swiper mySwiper relative">
+    <div class="swiper-wrapper h-[280px] lg:h-[400px]">
+      <div class="swiper-slide relative">
+        <div class="absolute lg:w-full right-4 z-20">
+          <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
+            سامانه مدیریت نقدینگی
+          </h1>
+          <p class="text-sm">
+            خرید و فروش دارایی های توکنیزه شده را در محیطی امن و حرفه ای تجربه
+            کنید
+          </p>
+          <button
+            class="z-20 py-3 px-[21px] bg-blue-800 justify-end absolute left-4 top-52 lg:top-[300px] lg:left-20 rounded-3xl">
+            <span class="flex align-middle justify-center rounded-3xl text-xs lg:text-lg">همین حالا ثبت نام کنید</span>
+          </button>
         </div>
-        <div class="swiper-slide relative h-full text-white">
-          <div class="z-20 absolute right-4">
-            <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
-              مدیریت و ردیابی معاملات
-            </h1>
-            <p class="text-sm">
-              سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
-              توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند.
-            </p>
-          </div>
-          <img
-            class="h-full w-full absolute opacity-30 z-0"
-            src="/public/images/slider2.jpg"
-            alt=""
-          />
+        <img class="w-full h-full opacity-30 absolute lg:-top-72 lg:h-auto" src="/public/images/slieder1.jfif" alt="" />
+      </div>
+      <div class="swiper-slide relative h-full text-white">
+        <div class="z-20 absolute right-4">
+          <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
+            مدیریت و ردیابی معاملات
+          </h1>
+          <p class="text-sm">
+            سامانه به‌طور خودکار تمامی معاملات خرید و فروش دارایی‌های
+            توکنیزه‌شده را ثبت، ردیابی و ذخیره می‌کند.
+          </p>
         </div>
-        <div class="swiper-slide relative h-full text-white">
-          <div class="z-20 absolute right-4">
-            <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
-              حفظ امنیت و شفافیت
-            </h1>
-            <p class="text-sm">
-              با استفاده از فناوری‌های رمزنگاری و بلاک‌چین، این سامانه از امنیت
-              بالایی برخوردار است.
-            </p>
-          </div>
-          <img
-            class="h-full w-full absolute opacity-30 z-0"
-            src="/public/images/slider3.jpg"
-            alt=""
-          />
+        <img class="h-full w-full absolute opacity-30 z-0" src="/public/images/slider2.jpg" alt="" />
+      </div>
+      <div class="swiper-slide relative h-full text-white">
+        <div class="z-20 absolute right-4">
+          <h1 class="py-5 text-xl lg:text-2xl lg:py-16">
+            حفظ امنیت و شفافیت
+          </h1>
+          <p class="text-sm">
+            با استفاده از فناوری‌های رمزنگاری و بلاک‌چین، این سامانه از امنیت
+            بالایی برخوردار است.
+          </p>
         </div>
+        <img class="h-full w-full absolute opacity-30 z-0" src="/public/images/slider3.jpg" alt="" />
       </div>
       <div class="swiper-pagination"></div>
     </div>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="/public/fonts/index.css">
+    <link rel="icon" href="/public/images/Lotouslogo.png">
+    
+    <title>نوبار با Alpine.js</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <style>
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body x-data="{ open: false }">
+    <header class="relative">
+        <div class="flex items-center justify-between px-8 py-4 border-gray bg-base w-full top-0 mb-4 flex-wrap">
+            <!-- دکمه باز کردن نوبار -->
+            <button @click="open = !open" class="to-white-200 p-2 rounded-md block md:hidden">
+                <img src="/src/image/bars.png" class="w-8" alt="menu">
+            </button>
+
+            <!-- لوگو و جستجو -->
+            <div class="flex items-center lg:w-4/6">
+                <img src="/public/images/Lotouslogo.png" alt="Lotous Logo" class="w-[115px]" />
+                <div class="relative h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block w-full ">
+                    <input type="text"
+                        class="pt-3 rounded-lg focus:outline-none placeholder-gray-300 text-base hidden lg:block lg:w-full"
+                        placeholder="جستجو کنید..." />
+                    <div class="absolute inset-y-0 flex items-center">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block lg:hidden">
+                <ul class="text-sm flex items-center gap-6 w-full">
+                    <li
+                        class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
+                        معاملات
+                        <!-- <img src="/src/image/arrow.png" class="w-4" calt=""> -->
+
+                    </li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">آموزش</li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">فرصت‌های
+                        سرمایه‌گذاری</li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">قوانین</li>
+                </ul>
+            </div>
+            <!-- ورود و تغییر تم -->
+            <div class="flex gap-2">
+                <div
+                    class="border rounded-3xl text-white-800 hidden md:flex items-center gap-2 justify-center px-4 py-3 cursor-pointer">
+                    <img src="/src/image/loginheader.svg" class="w-4" alt="">
+                    <p class="text-white text-xs xl:text-gray-50">ورود / ثبت نام</p>
+                </div>
+                <div class="py-1 px-4 border rounded-3xl flex items-center lg:block" >
+                    <img src="/src/image/sun.svg" alt="dark/light" class="w-6 lg:w-auto" />
+                </div>
+            </div>
+            <div class="hidden lg:block lg:w-full py-4">
+                <ul class="text-sm flex flex-wrap lg:justify-start lg:w-full gap-6  md:text-[16px]">
+                    <li
+                        class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
+                        معاملات
+                        <!-- <img src="/src/image/arrow.png" class="w-4" calt=""> -->
+                    </li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">آموزش</li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">فرصت‌های سرمایه‌گذاری
+                    </li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">قوانین</li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">اخبار</li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">تماس با ما</li>
+                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">درباره ما</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- نوبار سمت راست -->
+        <div class="fixed top-0 right-0 h-full w-64 bg-base text-white shadow-lg transform sidebar md:hidden"
+            :class="open ? 'translate-x-0' : 'translate-x-full'" x-show="open"
+            x-transition:enter="transition ease-out duration-300" x-transition:enter-start="translate-x-full"
+            x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full">
+            <div class="p-4 flex justify-between items-center">
+                <h2 class="text-lg font-bold">منو</h2>
+                <button @click="open = false" class="text-white text-xl">&times;</button>
+            </div>
+            <ul class="p-4 space-y-4 text-sm flex flex-col">
+                <li
+                    class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300 flex items-center gap-2">
+                    معاملات
+                    <!-- <img src="/src/image/arrow.png" class="w-4"> -->
+
+                </li>
+                <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">آموزش</li>
+                <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">فرصت‌های
+                    سرمایه‌گذاری</li>
+                <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">قوانین</li>
+                <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">اخبار</li>
+                <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">تماس با ما
+                </li>
+                <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">درباره ما
+                </li>
+                <li
+                    class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300 text-lg flex items-center gap-4">
+                    <img src="/src/image/loginheader.svg" class="w-6" alt="">
+                    <p class="text-white text-sm xl:text-gray-50">ورود / ثبت نام</p>
+                </li>
+            </ul>
+
+        </div>
+
+    </header>
+</body>
+
+</html>
