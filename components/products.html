@@ -43,7 +43,7 @@
                     <li
                         class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
                         معاملات
-                        <img src="/src/image/arrow.png" class="w-4" calt="">
+                        <!-- <img src="/src/image/arrow.png" class="w-4" calt=""> -->
 
                     </li>
                     <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">آموزش</li>
@@ -68,7 +68,7 @@
                     <li
                         class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
                         معاملات
-                        <img src="/src/image/arrow.png" class="w-4" calt="">
+                        <!-- <img src="/src/image/arrow.png" class="w-4" calt=""> -->
                     </li>
                     <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">آموزش</li>
                     <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">فرصت‌های سرمایه‌گذاری
@@ -95,7 +95,7 @@
                 <li
                     class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300 flex items-center gap-2">
                     معاملات
-                    <img src="/src/image/arrow.png" class="w-4">
+                    <!-- <img src="/src/image/arrow.png" class="w-4"> -->
 
                 </li>
                 <li class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300">آموزش</li>
@@ -138,14 +138,19 @@
                         <img src="/public/images/sort.svg" class="flex flex-col justify-self-start" alt="">
                         <p class="flex flex-shrink-0">مرتب سازی:&nbsp;</p>
                     </div>
-                    <div class="mb-6 md:m-0 lg:justify-between w-full md:pr-6 lg:p-0">
-                        <ul class="flex gap-4 lg:items-center text-sm lg:text-lg lg:justify-between lg:px-8">
-                            <li class="text-blue-100 font-bold">قیمت</li>
-                            <li class="">بازدید</li>
-                            <li class="">دارای ظرفیت</li>
-                            <li class="">جدیدترین</li>
-                        </ul>
-                    </div>
+                        <div class="mb-6 md:m-0 lg:justify-between w-full md:pr-6 lg:p-0" x-data="{ selected: 1 }">
+                            <ul class="flex gap-4 lg:items-center text-sm lg:text-lg lg:justify-between lg:px-8">
+                                <li @click="selected = 1" :class="selected === 1 ? 'text-blue-100 font-bold' : ''" class="cursor-pointer">قیمت
+                                </li>
+                                <li @click="selected = 2" :class="selected === 2 ? 'text-blue-100 font-bold' : ''" class="cursor-pointer">بازدید
+                                </li>
+                                <li @click="selected = 3" :class="selected === 3 ? 'text-blue-100 font-bold' : ''" class="cursor-pointer">دارای
+                                    ظرفیت</li>
+                                <li @click="selected = 4" :class="selected === 4 ? 'text-blue-100 font-bold' : ''" class="cursor-pointer">
+                                    جدیدترین</li>
+                            </ul>
+                        </div>
+
                 </div>
             </div>
             <div
