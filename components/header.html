@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="/src/output.css">
     <link rel="stylesheet" href="/public/fonts/index.css">
     <link rel="icon" href="/public/images/Lotouslogo.png">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
-
+    
     <title>نوبار با Alpine.js</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
     <style>
         .sidebar {
             transition: transform 0.3s ease-in-out;
@@ -18,7 +19,7 @@
 </head>
 
 <body x-data="{ open: false }">
-    <header class="relative border">
+    <header class="relative">
         <div class="flex items-center justify-between px-8 py-4 border-gray bg-base w-full top-0 mb-4 flex-wrap">
             <!-- دکمه باز کردن نوبار -->
             <button @click="open = !open" class="to-white-200 p-2 rounded-md block md:hidden">
@@ -115,11 +116,6 @@
 
         </div>
 
-        <!-- محتوای صفحه که با باز شدن نوبار به سمت چپ می‌رود -->
-        <div class="transition-all duration-300" :class="open ? 'mr-64' : 'mr-0'">
-            <h1 class="text-center text-2xl p-5">محتوای اصلی صفحه</h1>
-            <p class="text-center">این محتوا وقتی که نوبار باز شود به سمت چپ جابجا خواهد شد.</p>
-        </div>
     </header>
 </body>
 
