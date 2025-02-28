@@ -14,54 +14,193 @@
       rel="stylesheet"
     />
     <title>Document</title>
+    
+    <style>
+      .sidebar {
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
   </head>
 
-  <body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
-    <header class="bg-black w-full top-0">
-      <div class="flex items-center justify-around py-4 border-gray">
-        <div class="flex">
+  <body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto" x-data="{ open: false }">
+    <header class="relative">
+      <div
+        class="flex items-center justify-between px-8 py-4 border-gray bg-base w-full top-0 mb-4 flex-wrap"
+      >
+        <!-- دکمه باز کردن نوبار -->
+        <button
+          @click="open = !open"
+          class="to-white-200 p-2 rounded-md block md:hidden"
+        >
+          <img src="/src/image/bars.png" class="w-8" alt="menu" />
+        </button>
+
+        <!-- لوگو و جستجو -->
+        <div class="flex items-center lg:w-4/6">
           <img
             src="/public/images/Lotouslogo.png"
             alt="Lotous Logo"
             class="w-[115px]"
           />
           <div
-            class="relative w-[450px] h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block"
+            class="relative h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block w-full"
           >
             <input
               type="text"
-              class="px-7 pt-3 rounded-lg focus:outline-none placeholder-gray-300 hidden lg:block"
-              placeholder="جست و جو"
+              class="pt-3 rounded-lg focus:outline-none placeholder-gray-300 text-base hidden lg:block lg:w-full"
+              placeholder="جستجو کنید..."
             />
             <div class="absolute inset-y-0 flex items-center">
               <i class="fas fa-search text-gray-400"></i>
             </div>
           </div>
         </div>
-        <div class="flex">
+        <div class="hidden md:block lg:hidden">
+          <ul class="text-sm flex items-center gap-6 w-full">
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2"
+            >
+              معاملات
+              <!-- <img src="/src/image/arrow.png" class="w-4" calt=""> -->
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              آموزش
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              فرصت‌های سرمایه‌گذاری
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              قوانین
+            </li>
+          </ul>
+        </div>
+        <!-- ورود و تغییر تم -->
+        <div class="flex gap-2">
           <div
-            class="border rounded-3xl text-white-800 flex items-center justify-center px-4 py-1 gap-3"
+            class="border rounded-3xl text-white-800 hidden md:flex items-center gap-2 justify-center px-4 py-3 cursor-pointer"
           >
-            <i
-              class="fa fa-sign-in text-xl text-white flex items-center"
-              aria-hidden="true"
-            ></i>
+            <img src="/src/image/loginheader.svg" class="w-4" alt="" />
             <p class="text-white text-xs xl:text-gray-50">ورود / ثبت نام</p>
           </div>
-          <div class="py-2 px-4 border rounded-3xl mr-5 hidden lg:block">
-            <img src="/public/images/sun.svg" alt="" class="m-auto" />
+          <div class="py-1 px-4 border rounded-3xl flex items-center lg:block">
+            <img
+              src="/src/image/sun.svg"
+              alt="dark/light"
+              class="w-6 lg:w-auto"
+            />
           </div>
         </div>
+        <div class="hidden lg:block lg:w-full py-4">
+          <ul
+            class="text-sm flex flex-wrap lg:justify-start lg:w-full gap-6 md:text-[16px]"
+          >
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2"
+            >
+              معاملات
+              <!-- <img src="/src/image/arrow.png" class="w-4" calt=""> -->
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              آموزش
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              فرصت‌های سرمایه‌گذاری
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              قوانین
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              اخبار
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              تماس با ما
+            </li>
+            <li
+              class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300"
+            >
+              درباره ما
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="hidden lg:block py-4">
-        <ul class="flex text-white font-iranyekan">
-          <li class="pr-4 text-xl">معاملات</li>
-          <li class="pr-4 text-xl">آموزش</li>
-          <li class="pr-4 text-xl">فرصت های سرمایه گذاری</li>
-          <li class="pr-4 text-xl">قوانین</li>
-          <li class="pr-4 text-xl">اخبار</li>
-          <li class="pr-4 text-xl">تماس با ما</li>
-          <li class="pr-4 text-xl">درباره ما</li>
+
+      <!-- نوبار سمت راست -->
+      <div
+        class="fixed top-0 right-0 h-full z-50 w-64 bg-base text-white shadow-lg transform sidebar md:hidden"
+        :class="open ? 'translate-x-0' : 'translate-x-full'"
+        x-show="open"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+      >
+        <div class="p-4 flex justify-between items-center">
+          <h2 class="text-lg font-bold">منو</h2>
+          <button @click="open = false" class="text-white text-xl">
+            &times;
+          </button>
+        </div>
+        <ul class="p-4 space-y-4 text-sm flex flex-col">
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300 flex items-center gap-2"
+          >
+            معاملات
+            <!-- <img src="/src/image/arrow.png" class="w-4"> -->
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300"
+          >
+            آموزش
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300"
+          >
+            فرصت‌های سرمایه‌گذاری
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300"
+          >
+            قوانین
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300"
+          >
+            اخبار
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300"
+          >
+            تماس با ما
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300"
+          >
+            درباره ما
+          </li>
+          <li
+            class="cursor-pointer border-b border-gray pb-3 border-opacity-20 hover:text-gray-300 text-lg flex items-center gap-4"
+          >
+            <img src="/src/image/loginheader.svg" class="w-6" alt="" />
+            <p class="text-white text-sm xl:text-gray-50">ورود / ثبت نام</p>
+          </li>
         </ul>
       </div>
     </header>
@@ -203,6 +342,66 @@
             </div>
           </div>
         </div>
+               <div
+          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
+        >
+          <img
+            class="rounded-t-[7px] w-full"
+            src="/public/images/Products/house1.png"
+            alt=""
+          />
+          <div class="flex absolute top-4 justify-between w-full">
+            <div class="">
+              <p
+                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
+              >
+                عرضه اولیه
+              </p>
+            </div>
+            <div
+              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
+            >
+              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
+            </div>
+          </div>
+          <div class="text-white mt-2 mr-5 text-xl relative">
+            <h2 class="">مجتمع مسکونی پرنیا</h2>
+            <div class="opacity-30 text-white text-sm mt-4">
+              <span class="pl-12">PRNI</span>
+              <span>تهران _ منطقه1_ مسکونی</span>
+            </div>
+            <div class="mt-5">
+              <span class="opacity-50 text-xs"
+                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
+                انتشار: 1403/12/12</span
+              >
+              <span class="opacity-50 text-xs mr-3">
+                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
+                مدت اعتبار: 36 ماه
+              </span>
+              <div class="mt-6 lg:mt-4">
+                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
+              </div>
+              <div class="mt-5 text-lg lg:mt-3">
+                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
+              </div>
+              <div
+                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
+              >
+                <button
+                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
+                >
+                  شروع سرمایه گذاری
+                </button>
+                <button
+                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
+                >
+                  مشاهده جزئیات
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> 
         <div
           class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
         >
@@ -302,128 +501,6 @@
               </span>
               <div class="mt-6 lg:mt-4">
                 <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-60000 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg max-w-[315px] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="opacity-50 text-sm"
-                  >شروع سرمایه گذاری : 100,000 تومان</span
-                >
               </div>
               <div class="mt-5 text-lg lg:mt-3">
                 <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
@@ -873,6 +950,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com/"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"
+      defer
+    ></script>
     <script>
       var windowSize = window.innerWidth;
 
