@@ -26,12 +26,12 @@
             </button>
 
             <!-- لوگو و جستجو -->
-            <div class="flex items-center">
+            <div class="flex items-center lg:w-4/6">
                 <img src="/public/images/Lotouslogo.png" alt="Lotous Logo" class="w-[115px]" />
-                <div class="relative h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block">
+                <div class="relative h-[50px] bg-white rounded-lg mr-5 pr-[14px] hidden lg:block w-full ">
                     <input type="text"
-                        class="px-7 pt-3 rounded-lg focus:outline-none placeholder-gray-300 hidden lg:block"
-                        placeholder="جست و جو" />
+                        class="pt-3 rounded-lg focus:outline-none placeholder-gray-300 text-base hidden lg:block lg:w-full"
+                        placeholder="جستجو کنید..." />
                     <div class="absolute inset-y-0 flex items-center">
                         <i class="fas fa-search text-gray-400"></i>
                     </div>
@@ -39,11 +39,12 @@
             </div>
             <div class="hidden md:block lg:hidden">
                 <ul class="text-sm flex items-center gap-6 w-full">
-                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
-                    معاملات
+                    <li
+                        class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
+                        معاملات
                         <img src="/src/image/arrow.png" class="w-4" calt="">
 
-                </li>
+                    </li>
                     <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">آموزش</li>
                     <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300">فرصت‌های
                         سرمایه‌گذاری</li>
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <div class="hidden lg:block lg:w-full py-4">
-                <ul class="text-sm flex flex-wrap lg:justify-start lg:w-full gap-6">
+                <ul class="text-sm flex flex-wrap lg:justify-start lg:w-full gap-6  md:text-[16px]">
                     <li
                         class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
                         معاملات
@@ -84,7 +85,7 @@
             :class="open ? 'translate-x-0' : 'translate-x-full'" x-show="open"
             x-transition:enter="transition ease-out duration-300" x-transition:enter-start="translate-x-full"
             x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300"
-            x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full" >
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full">
             <div class="p-4 flex justify-between items-center">
                 <h2 class="text-lg font-bold">منو</h2>
                 <button @click="open = false" class="text-white text-xl">&times;</button>
