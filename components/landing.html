@@ -15,6 +15,7 @@
     />
     <title>Document</title>
   </head>
+
   <body class="bg-black max-w-screen-xl overflow-x-hidden mx-auto">
     <header class="bg-black w-full top-0">
       <div class="flex items-center justify-around py-4 border-gray">
@@ -52,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-5 hidden">
+      <div class="hidden lg:block py-4">
         <ul class="flex text-white font-iranyekan">
           <li class="pr-4 text-xl">معاملات</li>
           <li class="pr-4 text-xl">آموزش</li>
@@ -628,313 +629,247 @@
       ></div>
     </div>
 
-    <div class="swiper myBlogSwiper lg:relative">
+    <div class="swiper myBlogSwiper lg:relative pb-5">
       <div class="swiper-wrapper">
         <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg min-w-[100%] md:max-w-[415px]"
+          class="swiper-slide py-2 bg-[#050a24] relative min-h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]"
         >
           <img
             class="rounded-t-[7px] w-full"
             src="/public/images/Products/house1.png"
             alt=""
           />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
+
+          <div class="text-white px-5 py-2 text-xl relative">
+            <h2 class="">موضوع</h2>
+            <div class="text-white text-sm mt-4"></div>
+            <div class="flex flex-col justify-between">
+              <div class="lg:mt-4 my-3">
+                <h2>تیتر مهم خبر</h2>
+
+                <span class="text-sm"
+                  >در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
+                  با انبوهی از…</span
                 >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
+              </div>
+              <div class="text-lg grid grid-cols-6 mt-5 lg:mt-16 justify-end">
+                <div class="col-span-2 opacity-30">
+                  <div class="flex-row flex">
+                    <img
+                      class="w-3.5 lg:w-4"
+                      src="/public/images/calendar-alt.svg"
+                      alt=""
+                    />
+                    <span class="text-[12px] px-2 lg:text-sm">1403/09/09</span>
+                  </div>
+                  <div class="flex-row flex">
+                    <img
+                      class="w-3.5 lg:w-4"
+                      src="/public/images/eye.svg"
+                      alt=""
+                    />
+                    <span class="text-[12px] px-2 lg:text-sm">110 بازدید</span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row text-xs col-span-4 justify-end lg:mt-[20px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
                 >
-                  مشاهده جزئیات
-                </button>
+                  <button class="text-[#64A0FF]">ادامه مطلب</button>
+                  <img
+                    class="w-5 mx-2"
+                    src="/public/images/arrowleft.svg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg min-w-[100%] md:max-w-[415px]"
+          class="swiper-slide py-2 bg-[#050a24] relative min-h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]"
         >
           <img
             class="rounded-t-[7px] w-full"
             src="/public/images/Products/house1.png"
             alt=""
           />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
+
+          <div class="text-white px-5 py-2 text-xl relative">
+            <h2 class="">موضوع</h2>
+            <div class="text-white text-sm mt-4"></div>
+            <div class="flex flex-col justify-between">
+              <div class="lg:mt-4 my-3">
+                <h2>تیتر مهم خبر</h2>
+
+                <span class="text-sm"
+                  >در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
+                  با انبوهی از…</span
                 >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
+              </div>
+              <div class="text-lg grid grid-cols-6 mt-5 lg:mt-16 justify-end">
+                <div class="col-span-2 opacity-30">
+                  <div class="flex-row flex">
+                    <img
+                      class="w-3.5 lg:w-4"
+                      src="/public/images/calendar-alt.svg"
+                      alt=""
+                    />
+                    <span class="text-[12px] px-2 lg:text-sm">1403/09/09</span>
+                  </div>
+                  <div class="flex-row flex">
+                    <img
+                      class="w-3.5 lg:w-4"
+                      src="/public/images/eye.svg"
+                      alt=""
+                    />
+                    <span class="text-[12px] px-2 lg:text-sm">110 بازدید</span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row text-xs col-span-4 justify-end lg:mt-[20px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
                 >
-                  مشاهده جزئیات
-                </button>
+                  <button class="text-[#64A0FF]">ادامه مطلب</button>
+                  <img
+                    class="w-5 mx-2"
+                    src="/public/images/arrowleft.svg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg min-w-[100%] md:max-w-[415px]"
+          class="swiper-slide py-2 bg-[#050a24] relative min-h-[500px] lg:h-[550px] rounded-lg max-sm:min-w-[100%] md:max-w-[415px]"
         >
           <img
             class="rounded-t-[7px] w-full"
             src="/public/images/Products/house1.png"
             alt=""
           />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg min-w-[100%] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="text-sm">شروع سرمایه گذاری : 100,000 تومان</span>
-              </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
-                >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-60000 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-fit swiper-slide border border-primary relative h-[500px] lg:h-[550px] rounded-lg min-w-[100%] md:max-w-[415px]"
-        >
-          <img
-            class="rounded-t-[7px] w-full"
-            src="/public/images/Products/house1.png"
-            alt=""
-          />
-          <div class="flex absolute top-4 justify-between w-full">
-            <div class="">
-              <p
-                class="py-2 px-4 bg-white mr-2 rounded-3xl text-sm text-primary"
-              >
-                عرضه اولیه
-              </p>
-            </div>
-            <div
-              class="text-white bg-gray-transparent relative rounded-3xl ml-2"
-            >
-              <p class="text-sm py-2 px-4 flex justify-center">20% پیشرفت</p>
-            </div>
-          </div>
-          <div class="text-white mt-2 mr-5 text-xl relative">
-            <h2 class="">مجتمع مسکونی پرنیا</h2>
-            <div class="opacity-30 text-white text-sm mt-4">
-              <span class="pl-12">PRNI</span>
-              <span>تهران _ منطقه1_ مسکونی</span>
-            </div>
-            <div class="mt-5">
-              <span class="opacity-50 text-xs"
-                ><i class="fa fa-calendar pl-2" aria-hidden="true"></i> تاریخ
-                انتشار: 1403/12/12</span
-              >
-              <span class="opacity-50 text-xs mr-3">
-                <i class="fa fa-clock pl-2" aria-hidden="true"></i>
-                مدت اعتبار: 36 ماه
-              </span>
-              <div class="mt-6 lg:mt-4">
-                <span class="opacity-50 text-sm"
-                  >شروع سرمایه گذاری : 100,000 تومان</span
+
+          <div class="text-white px-5 py-2 text-xl relative">
+            <h2 class="">موضوع</h2>
+            <div class="text-white text-sm mt-4"></div>
+            <div class="flex flex-col justify-between">
+              <div class="lg:mt-4 my-3">
+                <h2>تیتر مهم خبر</h2>
+
+                <span class="text-sm"
+                  >در دنیای پرشتاب امروز، جایی که برندها برای جلب توجه مخاطبان
+                  با انبوهی از…</span
                 >
               </div>
-              <div class="mt-5 text-lg lg:mt-3">
-                <span>یک متن کوتاه و مختصر برای توضیح پروژه سرمایه گذاری</span>
-              </div>
-              <div
-                class="text-xs text-left ml-2 mt-[30px] lg:mt-[40px] w-full flex md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
-              >
-                <button
-                  class="px-6 py-2 boreder bg-blue-600 rounded-lg text-white ml-1"
+              <div class="text-lg grid grid-cols-6 mt-5 lg:mt-16 justify-end">
+                <div class="col-span-2 opacity-30">
+                  <div class="flex-row flex">
+                    <img
+                      class="w-3.5 lg:w-4"
+                      src="/public/images/calendar-alt.svg"
+                      alt=""
+                    />
+                    <span class="text-[12px] px-2 lg:text-sm">1403/09/09</span>
+                  </div>
+                  <div class="flex-row flex">
+                    <img
+                      class="w-3.5 lg:w-4"
+                      src="/public/images/eye.svg"
+                      alt=""
+                    />
+                    <span class="text-[12px] px-2 lg:text-sm">110 بازدید</span>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-row text-xs col-span-4 justify-end lg:mt-[20px] md:mt-6 md:mr-[100px] lg:mr-[60px] lg:text-sm"
                 >
-                  شروع سرمایه گذاری
-                </button>
-                <button
-                  class="px-[25px] py-2 border border-blue-600 text-blue-600 rounded-lg"
-                >
-                  مشاهده جزئیات
-                </button>
+                  <button class="text-[#64A0FF]">ادامه مطلب</button>
+                  <img
+                    class="w-5 mx-2"
+                    src="/public/images/arrowleft.svg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
+
+    <footer class="w-full bg-[#000c3f] relative">
+      <div class="lg:flex">
+        <div class="pt-4">
+          <div>
+            <img class="mx-auto" src="/public/images/Lotouslogo.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 md:flex md:justify-between lg:flex lg:w-full"
+        >
+          <div>
+            <ul class="py-4 pr-6 lg:flex lg:mt-6 md:flex">
+              <li class="py-2 lg:px-2 md:px-4 hover:text-blue-600">
+                بازار معاملاتی
+              </li>
+              <li class="py-2 lg:px-2 md:px-4 hover:text-blue-600">
+                معاملات سریع
+              </li>
+              <li class="py-2 lg:px-2 md:px-4 hover:text-blue-600">
+                فرصت های سرمایه گذاری
+              </li>
+              <li class="py-2 lg:px-2 hover:text-blue-600">قوانین سایت</li>
+              <li class="py-2 lg:px-2 hover:text-blue-600">تماس با ما</li>
+            </ul>
+          </div>
+          <div
+            class="grid grid-row-2 justify-end pl-6 md:flex md:pl-4 lg:flex lg:justify-end lg:pl-16"
+          >
+            <img
+              class="w-[106px] h-[106px] lg:mt-6"
+              src="/public/images/eNamad.png"
+              alt=""
+            />
+            <img
+              class="w-[106px] h-[106px] lg:mt-7"
+              src="/public/images/mojavez.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <p class="py-5 px-6 text-justify text-xs lg:text-sm">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+          طلبد،
+        </p>
+      </div>
+      <div class="">
+        <ul class="flex flex-row justify-center">
+          <li class="px-4 max-[400px]:px-2">
+            <img src="/public/images/instagram.svg" alt="" />
+          </li>
+          <li class="px-4 max-[400px]:px-2">
+            <img src="/public/images/linkedin.svg" alt="" />
+          </li>
+          <li class="px-4 max-[400px]:px-2">
+            <img src="/public/images/Twitter.svg" alt="" />
+          </li>
+          <li class="px-4 max-[400px]:px-2">
+            <img src="/public/images/facebook.svg" alt="" />
+          </li>
+        </ul>
+      </div>
+      <div
+        class="w-[30%] lg:w-[40%] bg-black absolute h-7 rounded-tl-3xl top-[95%] md:top-[91.5%] lg:top-[89.8%]"
+      ></div>
+      <div
+        class="w-[30%] lg:w-[40%] bg-black absolute h-7 rounded-tr-3xl top-[95%] right-[70%] md:top-[91.5%] lg:top-[89.8%] lg:right-[60%]"
+      ></div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com/"></script>
@@ -942,13 +877,13 @@
       var windowSize = window.innerWidth;
 
       var swiper = new Swiper(".mySwiper", {
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-        paginationClickable: true,
-        spaceBetween: 30,
-        loop: true,
       });
 
       var cardSwiper = new Swiper(".myCardSwiper", {
