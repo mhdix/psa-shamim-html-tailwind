@@ -11,11 +11,11 @@
 
     <title>اطلاعات پروژه</title>
 
-        <style>
-            .sidebar {
-                transition: transform 0.3s ease-in-out;
-            }
-        </style>
+    <style>
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body class="max-w-screen-xl mx-auto bg-base" x-data="{ open: false }">
@@ -40,7 +40,8 @@
             </div>
             <div class="hidden md:block lg:hidden">
                 <ul class="text-sm flex items-center gap-6 w-full">
-                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
+                    <li
+                        class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
                         معاملات
                         <img src="/src/image/arrow.png" class="w-4" calt="">
 
@@ -64,7 +65,8 @@
             </div>
             <div class="hidden lg:block lg:w-full py-4">
                 <ul class="text-sm flex flex-wrap lg:justify-start lg:w-full gap-6  md:text-[16px]">
-                    <li class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
+                    <li
+                        class="cursor-pointer border-gray border-opacity-20 hover:text-gray-300 flex items-center gap-2">
                         معاملات
                         <img src="/src/image/arrow.png" class="w-4" calt="">
                     </li>
@@ -114,7 +116,7 @@
 
         </div>
     </header>
-    
+
     <div class="mb-4">
         <img src="/src/image/herorpoject.png" alt="" class="">
     </div>
@@ -200,7 +202,7 @@
             <div>
                 <img src="/src/image/project.svg" alt="">
                 <p class="text-sm md:text-lg block w-full col-span-2 mt-6 mb-3">اطلاعات پروژه</p>
-                <div class="flex flex-wrap justify-start gap-4 mb-4 md:flex md:justify-start">
+                <!-- <div class="flex flex-wrap justify-start gap-4 mb-4 md:flex md:justify-start">
                     <button
                         class="bg-blue-600 hover:bg-blue-700 hover:text-white text-white py-2 rounded-lg h-11 text-sm px-2 max-w-36 min-w-36">
                         شروع سرمایه گذاری
@@ -216,32 +218,84 @@
                         class="border text-blue-100 border-blue-100 hover:bg-blue-700 hover:text-white py-2 rounded-lg h-11 text-sm px-2 max-w-36 min-w-36">
                         مدارک پروژه
                     </button>
+                </div> -->
+
+
+                <!-- مطمئن شوید Alpine.js در صفحه لود شده باشد -->
+                <div x-data="{ selectedTab: 'invest' }" class="p-4">
+                    <!-- دکمه‌های تب -->
+                    <div class="flex flex-wrap justify-start gap-4 mb-4">
+                        <button @click="selectedTab = 'invest'"
+                            :class="selectedTab === 'invest' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border text-blue-100 border-blue-100 hover:bg-blue-700 hover:text-white'"
+                            class="py-2 rounded-lg h-11 text-sm px-2 max-w-36 min-w-36">
+                            شروع سرمایه گذاری
+                        </button>
+                        <button @click="selectedTab = 'amenities'"
+                            :class="selectedTab === 'amenities' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border text-blue-100 border-blue-100 hover:bg-blue-700 hover:text-white'"
+                            class="py-2 rounded-lg h-11 text-sm px-2 max-w-36 min-w-36">
+                            امکانات پروژه
+                        </button>
+                        <button @click="selectedTab = 'units'"
+                            :class="selectedTab === 'units' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border text-blue-100 border-blue-100 hover:bg-blue-700 hover:text-white'"
+                            class="py-2 rounded-lg h-11 text-sm px-2 max-w-36 min-w-36">
+                            واحدهای پروژه
+                        </button>
+                        <button @click="selectedTab = 'documents'"
+                            :class="selectedTab === 'documents' ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'border text-blue-100 border-blue-100 hover:bg-blue-700 hover:text-white'"
+                            class="py-2 rounded-lg h-11 text-sm px-2 max-w-36 min-w-36">
+                            مدارک پروژه
+                        </button>
+                    </div>
+                
+                    <!-- محتوای تب‌ها -->
+                    <div class="mb-6">
+                        <!-- تب "شروع سرمایه گذاری" -->
+                        <div x-show="selectedTab === 'invest'" x-cloak>
+                            <h2 class="text-lg font-bold mb-2">شروع سرمایه گذاری</h2>
+                                    <p class="text-pretty text-justify">پروژه مجتمع مسکونی اِمار در شهرستان بندرعباس، در یکی از بهترین و
+                                        استراتژیک‌ترین
+                                        نقاط این شهر واقع شده است. این پروژه در
+                                        محله خواجه عطا، خیابان فلسطین، در نزدیکی ساحل خلیج فارس قرار دارد. موقعیت جغرافیایی پروژه،
+                                        دسترسی
+                                        آسان به سواحل خلیج
+                                        فارس و سایر امکانات شهری را فراهم می‌کند و این ویژگی‌ها باعث افزایش ارزش اقتصادی و مطلوبیت بالای
+                                        پروژه برای ساکنین و
+                                        سرمایه‌گذاران می‌شود. با توجه به رشد سریع اقتصادی این منطقه و ظرفیت بالای جذب ساکنین جدید، پروژه
+                                        اِمار می‌تواند فرصت
+                                        مناسبی برای سرمایه‌گذاری در زمینه مسکن باشد. بندرعباس به عنوان یکی از شهرهای کلیدی اقتصادی کشور
+                                        و با
+                                        دارا بودن صنایع
+                                        بزرگ مانند پالایشگاه‌ها، فولاد و اسکله‌های تجاری، به سرعت در حال رشد است و این پروژه در یکی از
+                                        مناطق
+                                        مستعد این شهر واقع
+                                        شده که در آینده می‌تواند بازدهی بالایی برای سرمایه‌گذاران به ارمغان آورد. در مجموع، پروژه اِمار
+                                        به
+                                        دلیل موقعیت جغرافیایی
+                                        استثنایی، طراحی مدرن و پتانسیل بالای منطقه بندرعباس برای رشد اقتصادی، به عنوان یک گزینه جذاب
+                                        برای
+                                        سرمایه‌گذاری و تامین
+                                        مسکن با کیفیت شناخته می‌شود.</p>
+                            <!-- <p class="text-pretty text-justify">حالا شروع سرمایه گذاری سکشن</p> -->
+                        </div>
+                        <!-- تب "امکانات پروژه" -->
+                        <div x-show="selectedTab === 'amenities'" x-cloak>
+                            <h2 class="text-lg font-bold mb-2">امکانات پروژه</h2>
+                            <p class="text-pretty text-justify"> امکانات پروژه سکشن</p>
+                        </div>
+                        <!-- تب "واحدهای پروژه" -->
+                        <div x-show="selectedTab === 'units'" x-cloak>
+                            <h2 class="text-lg font-bold mb-2">واحدهای پروژه</h2>
+                            <p class="text-pretty text-justify"> واحدهای پروژه سکشن</p>
+                        </div>
+                        <!-- تب "مدارک پروژه" -->
+                        <div x-show="selectedTab === 'documents'" x-cloak>
+                            <h2 class="text-lg font-bold mb-2">مدارک پروژه</h2>
+                            <p class="text-pretty text-justify"> مدارک پروژه سکشن</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-6">
-                    <p class="text-pretty text-justify">پروژه مجتمع مسکونی اِمار در شهرستان بندرعباس، در یکی از بهترین و
-                        استراتژیک‌ترین
-                        نقاط این شهر واقع شده است. این پروژه در
-                        محله خواجه عطا، خیابان فلسطین، در نزدیکی ساحل خلیج فارس قرار دارد. موقعیت جغرافیایی پروژه،
-                        دسترسی
-                        آسان به سواحل خلیج
-                        فارس و سایر امکانات شهری را فراهم می‌کند و این ویژگی‌ها باعث افزایش ارزش اقتصادی و مطلوبیت بالای
-                        پروژه برای ساکنین و
-                        سرمایه‌گذاران می‌شود. با توجه به رشد سریع اقتصادی این منطقه و ظرفیت بالای جذب ساکنین جدید، پروژه
-                        اِمار می‌تواند فرصت
-                        مناسبی برای سرمایه‌گذاری در زمینه مسکن باشد. بندرعباس به عنوان یکی از شهرهای کلیدی اقتصادی کشور
-                        و با
-                        دارا بودن صنایع
-                        بزرگ مانند پالایشگاه‌ها، فولاد و اسکله‌های تجاری، به سرعت در حال رشد است و این پروژه در یکی از
-                        مناطق
-                        مستعد این شهر واقع
-                        شده که در آینده می‌تواند بازدهی بالایی برای سرمایه‌گذاران به ارمغان آورد. در مجموع، پروژه اِمار
-                        به
-                        دلیل موقعیت جغرافیایی
-                        استثنایی، طراحی مدرن و پتانسیل بالای منطقه بندرعباس برای رشد اقتصادی، به عنوان یک گزینه جذاب
-                        برای
-                        سرمایه‌گذاری و تامین
-                        مسکن با کیفیت شناخته می‌شود.</p>
-                </div>
+         
+
                 <div class="bg-gray-900 text-white rounded-lg mx-auto mb-4">
                     <!-- Table Header -->
 
@@ -319,13 +373,18 @@
                 <div>
                     <div class="flex flex-col gap-2 mb-2 text-sm md:text-lg">
                         <h2 class=" md:text-lg">آدرس پروژه</h2>
+                        <p class=" text-xs md:text-lg ">تهران- پاسداران- گلستان پنجم</p>
                         <span class="flex items-center">
-                            <img src="/src/image/location.svg" class="w-4" alt="">&nbsp;
-                            <p class=" text-xs md:text-lg ">تهران- پاسداران- گلستان پنجم</p>
+                            <div class="w-full h-[300px] flex flex-col justify-center items-center">
+                                <iframe class="w-full h-full rounded-lg shadow-lg border border-gray-300"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093685!2d144.9559263153159!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e33!2z5ZCJ5pys5LiA5aC0!5e0!3m2!1sfa!2sus!4v1634290288076!5m2!1sfa!2sus"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+
 
                         </span>
                     </div>
-                    <img src="/src/image/map.svg" alt="">
                 </div>
             </div>
         </div>
